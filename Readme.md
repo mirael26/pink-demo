@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Эльмира Ильясова](https://up.htmlacademy.ru/adaptive/19/user/471345).
-* Наставник: `Неизвестно`.
+* Наставник: [Вадим Канинский](https://htmlacademy.ru/profile/id78842).
 
 ---
 
