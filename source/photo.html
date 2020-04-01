@@ -7,7 +7,7 @@
   <body>
 
     <header class="page-header">
-      <a class="page-header__logo logo logo--small">
+      <a class="page-header__logo logo logo--small" href="index.html">
         <img class="logo__image" src="#" width="" height="" alt="Логотип Pink">
       </a>
       <nav class="main-nav">
@@ -23,7 +23,7 @@
             <a class="main-nav__link" href="form.html">Конкурс</a>
           </li>
           <li>
-            <a class="main-nav__link" href="">HTML Academy</a>
+            <a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           </li>
         </ul>
       </nav>
@@ -39,10 +39,10 @@
         </p>
         <div class="gallery__list">
           <blockquote class="gallery__item">
-            <p class="gallery__picture gallery__picture--panorama">
+            <a href="" class="gallery__link gallery__link--panorama">
               <small class="gallery__tag">Панорама дня</small>
               <img class="gallery__image" src="" width="" height="" alt="Фотография пользователя">
-            </p>
+            </a>
             <cite class="gallery__author-name">Анна
               <span class="gallery__time">(5 минут назад)</span>
             </cite>
@@ -53,9 +53,9 @@
           </blockquote>
 
           <blockquote class="gallery__item">
-            <p class="gallery__picture">
+            <a href="" class="gallery__link">
               <img class="gallery__image" src="" width="" height="" alt="Фотография пользователя">
-            </p>
+            </a>
             <cite class="gallery__author-name">Левон
               <span class="gallery__time">(5 часов назад)</span>
             </cite>
@@ -66,9 +66,9 @@
           </blockquote>
 
           <blockquote class="gallery__item">
-            <p class="gallery__picture">
+            <a href="" class="gallery__link">
               <img class="gallery__image" src="" width="" height="" alt="Фотография пользователя">
-            </p>
+            </a>
             <cite class="gallery__author-name">Антон
               <span class="gallery__time">(12 часов назад)</span>
             </cite>
@@ -79,9 +79,9 @@
           </blockquote>
 
           <blockquote class="gallery__item">
-            <p class="gallery__picture">
+            <a href="" class="gallery__link">
               <img class="gallery__image" src="" width="" height="" alt="Фотография пользователя">
-            </p>
+            </a>
             <cite class="gallery__author-name">Борис
               <span class="gallery__time">(20 часов назад)</span>
             </cite>
@@ -92,9 +92,9 @@
           </blockquote>
 
           <blockquote class="gallery__item">
-            <p class="gallery__picture">
+            <a href="" class="gallery__link">
               <img class="gallery__image" src="" width="" height="" alt="Фотография пользователя">
-            </p>
+            </a>
             <cite class="gallery__author-name">Сергей
               <span class="gallery__time">(25 часов назад)</span>
             </cite>
@@ -105,9 +105,9 @@
           </blockquote>
 
           <blockquote class="gallery__item">
-            <p class="gallery__picture">
+            <a href="" class="gallery__link">
               <img class="gallery__image" src="" width="" height="" alt="Фотография пользователя">
-            </p>
+            </a>
             <cite class="gallery__author-name">Максим
               <span class="gallery__time">(40 часов назад)</span>
             </cite>
@@ -118,9 +118,9 @@
           </blockquote>
 
           <blockquote class="gallery__item">
-            <p class="gallery__picture">
+            <a href="" class="gallery__link">
               <img class="gallery__image" src="" width="" height="" alt="Фотография пользователя">
-            </p>
+            </a>
             <cite class="gallery__author-name">Надежда
               <span class="gallery__time">(45 часов назад)</span>
             </cite>
@@ -130,6 +130,29 @@
             <b class="gallery__like">НРАВИТСЯ: 2560</b>
           </blockquote>
         </div>
+      </section>
+
+      <section class="editor">
+        <h2 class="visually-hidden">Инструмент обработки изображений</h2>
+        <p class="editor__picture">
+          <img class="editor__image" src="" width="" height="" alt="Изображение для редактирования">
+        </p>
+        <form class="editor__form" action="https://echo.htmlacademy.ru" method="post">
+          <div class="editor__list">
+            <label class="editor__item editor__item--active" for="crop">
+              <img class="editor__icon" src="" width="" height="" alt="Обрезка">
+            </label>
+            <label class="editor__item" for="fill">
+              <img class="editor__icon" src="" width="" height="" alt="Заливка">
+            </label>
+            <label class="editor__item" for="contrast">
+              <img class="editor__icon" src="" width="" height="" alt="Контраст">
+            </label>
+          </div>
+          <input type="range" name="crop" id="crop" >
+          <input class="editor__button button" type="submit" name="editor-submit" value="Запостить">
+          <button class="editor__button button" type="reset">Отмен</button>
+        </form>
       </section>
 
     </main>
@@ -153,7 +176,7 @@
       </div>
       <div class="page-footer__copyright copyright">
         <b class="copyright__text">Разработано</b>
-        <a class="copyright__link" href="">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           <img class="copyright__image" src="" width="" height="" alt="Логотип HTML Academy">
         </a>
       </div>
