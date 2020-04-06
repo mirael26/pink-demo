@@ -1,0 +1,71 @@
+@mixin list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin title-white {
+  font-size: 18px;
+  font-weight: 700;
+  color: $white;
+}
+
+@mixin title-black {
+  font-size: 18px;
+  font-weight: 700;
+  color: $black;
+}
+
+@mixin title-blue {
+  font-size: 18px;
+  font-weight: 700;
+  color: $blue;
+}
+
+@mixin title-pink {
+  font-size: 18px;
+  font-weight: 700;
+  color: $pink;
+}
+
+@mixin lead-white {
+  font-size: 24px;
+  font-weight: 300;
+  color: $white;
+}
+
+@mixin lead-blue {
+  font-size: 24px;
+  font-weight: 300;
+  color: $blue;
+}
+
+@mixin contact-pink {
+  font-size: 24px;
+  font-weight: 300;
+  color: $pink;
+}
+
+@mixin note-white {
+  font-size: 14px;
+  font-weight: 300;
+  color: $white;
+}
+
+@mixin form-text-blue {
+  font-size: 18px;
+  font-weight: 400;
+  color: $blue;
+}
+
+@mixin text-blue {
+  font-size: 14px;
+  font-weight: 400;
+  color: $blue;
+}
+
+@mixin text-pink {
+  font-size: 14px;
+  font-weight: 400;
+  color: $pink;
+}
