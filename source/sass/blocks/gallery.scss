@@ -1,0 +1,11 @@
+.gallery__wrapper {
+  padding: 36px 60px 84px;
+  background-color: $blue;
+  background-image: url("../img/bg-back-mobile@1x");
+}
+
+.gallery__title {
+  @include lead-white;
+  margin: 0;
+  padding: 0;
+}
