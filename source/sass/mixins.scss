@@ -5,66 +5,77 @@
 }
 
 @mixin title-white {
+  font-family: "Open Sans Bold", "Helvetica", sans-serif;
   font-size: 18px;
   font-weight: 700;
   color: $white;
 }
 
 @mixin title-black {
+  font-family: "Open Sans Bold", "Helvetica", sans-serif;
   font-size: 18px;
   font-weight: 700;
   color: $black;
 }
 
 @mixin title-blue {
+  font-family: "Open Sans Bold", "Helvetica", sans-serif;
   font-size: 18px;
   font-weight: 700;
   color: $blue;
 }
 
 @mixin title-pink {
+  font-family: "Open Sans Bold", "Helvetica", sans-serif;
   font-size: 18px;
   font-weight: 700;
   color: $pink;
 }
 
 @mixin lead-white {
+  font-family: "Open Sans Light", "Helvetica", sans-serif;
   font-size: 24px;
   font-weight: 300;
   color: $white;
 }
 
 @mixin lead-blue {
+  font-family: "Open Sans Light", "Helvetica", sans-serif;
   font-size: 24px;
   font-weight: 300;
   color: $blue;
 }
 
 @mixin contact-pink {
+  font-family: "Open Sans Light", "Helvetica", sans-serif;
   font-size: 24px;
   font-weight: 300;
   color: $pink;
 }
 
 @mixin note-white {
+  font-family: "Open Sans Light", "Helvetica", sans-serif;
   font-size: 14px;
   font-weight: 300;
   color: $white;
 }
 
 @mixin form-text-blue {
+  font-family: "Open Sans", "Helvetica", sans-serif;
   font-size: 18px;
   font-weight: 400;
   color: $blue;
 }
 
 @mixin text-blue {
+  font-family: "Open Sans", "Helvetica", sans-serif;
   font-size: 14px;
   font-weight: 400;
   color: $blue;
 }
 
 @mixin text-pink {
+  font-family: "Open Sans", "Helvetica", sans-serif;
   font-size: 14px;
   font-weight: 400;
   color: $pink;
