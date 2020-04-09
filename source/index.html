@@ -2,27 +2,29 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML Academy: Пинк</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
 
     <header class="page-header">
-      <a class="page-header__logo logo logo--small" href="">
-        <img class="logo__image" src="#" width="" height="" alt="Логотип Pink">
+      <a class="page-header__logo logo logo--white-mobile" href="">
+        <img class="logo__image" src="img/logo-pink-white-mobile.svg" width="310" height="95" alt="Логотип Pink">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
         <ul class="main-nav__list">
-          <li>
+          <li class="main-nav__item">
             <a class="main-nav__link" href="">Главная</a>
           </li>
-          <li>
+          <li class="main-nav__item">
             <a class="main-nav__link" href="photo.html">Фотографии</a>
           </li>
-          <li>
+          <li class="main-nav__item">
             <a class="main-nav__link" href="form.html">Конкурс</a>
           </li>
-          <li>
+          <li class="main-nav__item">
             <a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           </li>
         </ul>
@@ -35,41 +37,43 @@
       <section class="application">
         <h2 class="visually-hidden">Наше приложение</h2>
         <div class="application__wrapper">
-          <p class="application__slogan title">
+          <p class="application__slogan">
             Взгляните на жизнь иначе!
           </p>
         </div>
         <a class="application__button button button--white" href="https://www.apple.com/ru/ios/app-store/">Скачать приложение</a>
         <ul class="application__list">
           <li class="application__item">
-            <a class="application__link" href="https://www.apple.com/ru/ios/app-store/">
-              <img src="" width="" height="" alt="Иконка iPhone">
+            <a class="application__link application__link--apple" href="https://www.apple.com/ru/ios/app-store/">
+              <img src="img/logo-apple.svg" width="193" height="236" alt="Иконка iPhone">
             </a>
           </li>
           <li class="application__item">
-            <a class="application__link" href="https://www.apple.com/ru/ios/app-store/">
-              <img src="" width="" height="" alt="Иконка Android">
+            <a class="application__link application__link--android" href="https://play.google.com/store/apps?hl=ru">
+              <img src="img/logo-android.svg" width="175" height="196" alt="Иконка Android">
             </a>
           </li>
           <li class="application__item">
-            <a class="application__link" href="https://www.microsoft.com/ru-ru/store/apps/windows">
-              <img src="" width="" height="" alt="Иконка Windows">
+            <a class="application__link application__link--windows" href="https://www.microsoft.com/ru-ru/store/apps/windows">
+              <img src="img/logo-microsoft.svg" width="183" height="175" alt="Иконка Windows">
             </a>
           </li>
         </ul>
-        <p class="application__text">
+        <p class="application__note">
           Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
         </p>
       </section>
 
       <section class="advantages">
         <h2 class="visually-hidden">Наши преимущества</h2>
-        <p class="advantages__lead lead">
-          Устали от серости мегаполиса?
-        </p>
-        <p class="advantages__slogan">
-          Нам есть, что вам предложить!
-        </p>
+        <div class="advantages__wrapper">
+          <p class="advantages__lead">
+            Устали от серости мегаполиса?
+          </p>
+          <p class="advantages__lead">
+            Нам есть, что вам предложить!
+          </p>
+        </div>
         <ul class="advantages__list">
           <li class="advantages__item">
             <h3 class="advantages__title">Поднимает настроение</h3>
@@ -90,9 +94,6 @@
             </p>
           </li>
         </ul>
-        <div class="application-features">
-          <img class="application-features__image" src="" width="" height="" alt="Экран телефона">
-        </div>
       </section>
 
       <section class="reviews">
@@ -106,7 +107,7 @@
               </p>
             </blockquote>
           </div>
-          <div class="reviews__list slider__list">
+          <!--<div class="reviews__list slider__list">
             <blockquote class="reviews__item slider__item">
               <cite class="reviews__author-name"></cite>
               <p class="reviews__text"></p>
@@ -117,7 +118,7 @@
               <cite class="reviews__author-name"></cite>
               <p class="reviews__text"></p>
             </blockquote>
-          </div>
+          </div>-->
           <p class="reviews__toggles slider__toggles">
             <button class="slider__toggle" type="button">1</button>
             <button class="slider__toggle" type="button">2</button>
@@ -127,85 +128,103 @@
       </section>
 
       <section class="price">
-        <div class="price__wrapper slider">
-          <!--Пока не понимаю, как это будет сделано-->
-          <table class="price__list">
-            <tr>
-              <th class="price__tariff-name"></th>
-              <th class="price__tariff-name price__tariff-name--hit">
-                Стандарт<br>
+        <div class="price__list">
+          <table class="price__tariff">
+            <tr><th class="price__tariff-name">
+                Название<br>
                 <b class="price__cost">3,99 USD</b>
-              </th>
-              <th class="price__tariff-name"></th>
-            </tr>
-
-            <tr>
-              <td class="price__tariff-content"></td>
-              <td class="price__tariff-content price__tariff-content--included">
-                Розовый фильтр
-              </td>
-              <td class="price__tariff-content"></td>
-            </tr>
-
-            <tr>
-              <td class="price__tariff-content"></td>
-              <td class="price__tariff-content price__tariff-content--included">
-                Смайлики
-              </td>
-              <td class="price__tariff-content"></td>
-            </tr>
-
-            <tr>
-              <td class="price__tariff-content"></td>
-              <td class="price__tariff-content price__tariff-content--excluded">
-                Комментарии
-              </td>
-              <td class="price__tariff-content"></td>
-            </tr>
+              </th></tr>
+            <tr><td class="price__tariff-content">
+              Розовый фильтр
+            </td></tr>
+            <tr><td class="price__tariff-content">
+              Смайлики
+            </td></tr>
+            <tr><td class="price__tariff-content">
+              Комментарии
+            </td></tr>
           </table>
 
-        <p class="reviews__toggles slider__toggles">
+          <table class="price__tariff">
+            <tr><th class="price__tariff-name price__tariff-name--hit">
+                Стандарт<br>
+                <b class="price__cost">3,99 USD</b>
+              </th></tr>
+              <tr><td class="price__tariff-content price__tariff-content--on">
+                Розовый фильтр
+              </td></tr>
+              <tr><td class="price__tariff-content price__tariff-content--on">
+                Смайлики
+              </td></tr>
+              <tr><td class="price__tariff-content price__tariff-content--off">
+                Комментарии
+              </td></tr>
+          </table>
+
+          <table class="price__tariff">
+            <tr><th class="price__tariff-name price__tariff-name--hit">
+                Название<br>
+                <b class="price__cost">3,99 USD</b>
+              </th></tr>
+              <tr><td class="price__tariff-content">
+                Розовый фильтр
+              </td></tr>
+              <tr><td class="price__tariff-content">
+                Смайлики
+              </td></tr>
+              <tr><td class="price__tariff-content">
+                Комментарии
+              </td></tr>
+          </table>
+        </div>
+        <p class="price__toggles slider__toggles">
             <button class="slider__toggle" type="button">1</button>
             <button class="slider__toggle" type="button">2</button>
             <button class="slider__toggle" type="button">3</button>
           </p>
-        </div>
       </section>
 
       <section class="contacts">
         <h2 class="visually-hidden">Наши контакты</h2>
-        <p class="contacts__lead lead">
-          Остались вопросы?<br>Свяжитесь с нами!
-        </p>
-        <ul class="contacts__list">
-          <li class="contacts__item">
-            <h3 class="contacts__title">
-              Звоните:
-            </h3>
-            <a class="contacts__text" href="tel:+781255566666">
-              +7 (812) 555-66-66
-            </a>
-          </li>
-          <li class="contacts__item">
-            <h3 class="contacts__title">
-              Пишите:
-            </h3>
-            <a class="contacts__text" href="mailto:mail@htmlacademy.ru">
-              mail@htmlacademy.ru
-            </a>
-          </li>
-          <li class="contacts__item">
-            <h3 class="contacts__title">
-              Приезжайте в гости:
-            </h3>
-            <p class="contacts__text">
-              ул. Большая Конюшенная, 19/8
-            </p>
-          </li>
-        </ul>
+        <div class="contacts__wrapper">
+          <p class="contacts__lead">
+            Остались вопросы?<br>Свяжитесь с нами!
+          </p>
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <h3 class="contacts__title">
+                Звоните:
+              </h3>
+              <a class="contacts__text" href="tel:+781255566666">
+                +7 (812) 555-66-66
+              </a>
+            </li>
+            <li class="contacts__item">
+              <h3 class="contacts__title">
+                Пишите:
+              </h3>
+              <a class="contacts__text" href="mailto:mail@htmlacademy.ru">
+                mail@htmlacademy.ru
+              </a>
+            </li>
+            <li class="contacts__item">
+              <h3 class="contacts__title">
+                Приезжайте в гости:
+              </h3>
+              <p class="contacts__text">
+                ул. Большая Конюшенная, 19/8
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="contacts__map">
+          <img class="contacts__map-image" src="img/bg-map-mobile@1x.png" width="320" height="3429" alt="Мы на карте">
+        </div>
       </section>
 
-      <section class="map"></section>
+      <section>
+        <!--Интерактивная карта-->
+      </section>
 
     </main>
 

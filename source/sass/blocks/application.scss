@@ -1,0 +1,75 @@
+.application {
+  padding-bottom: 35px;
+  text-align: center;
+  background-color: $blue;
+}
+
+.application__wrapper {
+  padding-top: 29px;
+  margin-bottom: 28px;
+  background-image: url("../img/iphone-hand-mobile@1x.png"),
+    url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: calc(50% - 32px) bottom, center bottom;
+  background-size: auto, cover;
+}
+
+.application__slogan {
+  @include lead-white;
+  padding: 0 50px 320px;
+  margin: 0;
+  line-height: auto;
+  text-align: center;
+}
+
+.application__button {
+  display: inline-block;
+  margin: 0 auto 32px;
+}
+
+.application__list {
+  @include list;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.application__item {
+  margin-right: 36px;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.application__link {
+  display: block;
+
+  &--apple {
+    width: 47px;
+    height: 56px;
+  }
+
+  &--android {
+    width: 43px;
+    height: 47px;
+  }
+
+  &--windows {
+    width: 44px;
+    height: 41px;
+  }
+
+  &:hover {
+    color: rgba($blue, 0.5);
+  }
+}
+
+.application__note {
+  @include note-white;
+  margin: 0 20px 0;
+  line-height: 24px;
+  text-align: center;
+}
