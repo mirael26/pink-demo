@@ -1,6 +1,11 @@
 .page-header {
-  background-color: $blue;
+  min-height: 66px;
   padding-top: 22px;
+  background-color: $blue;
+
+  &--menu-close {
+    background-color: rgba($blue, 0.3);
+  }
 }
 
 .page-header__logo {
