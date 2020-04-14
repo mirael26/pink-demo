@@ -6,11 +6,8 @@
 }
 
 .price__list {
-  top: 0;
-  left: 0;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   margin-bottom: 40px;
   transform: translateX(calc(-416px + 50vw));
 }

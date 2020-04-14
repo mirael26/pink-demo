@@ -13,9 +13,9 @@
     position: absolute;
     top: 100%;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 32px;
-    background-image: url("../img/triangle-white-footer.png");
+    background-image: url("../img/bg-triangle-white-footer.svg");
     background-repeat: no-repeat;
     background-size: 100% 32px;
   }
@@ -69,4 +69,5 @@
   bottom: 0;
   left: 0;
   width: 100%;
+  z-index: -2;
 }
