@@ -13,11 +13,13 @@
     height: 34px;
     background-image: url("../img/bg-triangle-white.svg");
     background-repeat: no-repeat;
-    background-size: 100% 34px;
+    background-size: 100vw 100%;
   }
 }
 
 .reviews__item {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
 }
@@ -27,6 +29,12 @@
   display: inline-block;
   margin-bottom: 25px;
   font-style: normal;
+  line-height: 30px;
+}
+
+.reviews__author-info {
+  @include text-blue;
+  display: none;
   line-height: 30px;
 }
 
@@ -41,4 +49,27 @@
 .reviews__toggles {
   margin: 0;
   padding: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .reviews {
+    &::after {
+      bottom: -52px;
+      height: 52px;
+    }
+  }
+
+  .reviews__author-name {
+    font-size: 20px;
+    order: 2;
+  }
+
+  .reviews__author-info {
+    display: inline;
+  }
+
+  .reviews__text {
+    order: 1;
+    font-size: 18px;
+  }
 }

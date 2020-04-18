@@ -1,0 +1,130 @@
+.contest-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contest-form__fieldset {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 40px 20px 23px;
+  border: none;
+
+  &--white {
+    background-color: $white;
+  }
+
+  &--grey {
+    background-color: $light-grey;
+  }
+}
+
+.contest-form__label {
+  @include text-pink;
+  position: relative;
+  margin-left: 23px;
+  margin-bottom: 7px;
+  line-height: 30px;
+  text-transform: uppercase;
+
+  &--checkbox {
+    @include form-text-blue;
+    line-height: 30px;
+    text-transform: none;
+    margin-left: 70px;
+    margin-bottom: 53px;
+
+    &:last-child {
+      margin-bottom: 22px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -4px;
+      left: -70px;
+      width: 39px;
+      height: 39px;
+      border: 2px solid #e5e5e5;
+      border-radius: 3px;
+      background-color: $white;
+      box-shadow: none;
+    }
+  }
+
+  &--radio {
+    @include form-text-blue;
+    line-height: 30px;
+    text-transform: none;
+    margin-left: 70px;
+    margin-bottom: 53px;
+
+    &:last-child {
+      margin-bottom: 22px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -4px;
+      left: -70px;
+      width: 39px;
+      height: 39px;
+      border: 2px solid #e5e5e5;
+      border-radius: 50%;
+      background-color: $white;
+      box-shadow: none;
+    }
+  }
+}
+
+.contest-form__checkbox:checked + .contest-form__label--checkbox::before {
+  background-image: url("../img/icon-yes.svg");
+  background-repeat: no-repeat;
+  background-position: 7px 9px;
+  background-size: 22px 16px;
+}
+
+.contest-form__radio:checked + .contest-form__label--radio::before {
+  background-image: url("../img/icon-map-marker.svg");
+  background-repeat: no-repeat;
+  background-size: 35px 35px;
+}
+
+.contest-form__input {
+  @include form-text-blue;
+  width: 100%;
+  margin-bottom: 19px;
+  padding: 14px 20px;
+  line-height: 30px;
+  border: 2px solid #e5e5e5;
+  border-radius: 3px;
+}
+
+.contest-form__title {
+  @include text-pink;
+  margin: 0 15px 38px;
+  padding: 0;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+
+  &--textarea {
+    margin-bottom: 17px;
+  }
+}
+
+.contest-form__button {
+  margin: 0 20px 41px;
+}
+
+.contest-form__small {
+  @include text-blue;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: center;
+
+  &--pink {
+    color: $pink;
+  }
+}

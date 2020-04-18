@@ -1,22 +1,20 @@
 .application {
+  position: relative;
   text-align: center;
 }
 
-.application__wrapper {
-  &--bg-image {
-    position: relative;
-    padding: 29px 0 300px;
-    background-image: url("../img/iphone-hand-mobile@1x.png");
-    background-repeat: no-repeat;
-    background-position: calc(50% - 32px) bottom;
-    background-size: auto;
-  }
+.application__header {
+  position: relative;
+  padding: 29px 0 300px;
+  background-image: url("../img/iphone-hand-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: calc(50% - 32px) bottom;
+  background-size: auto;
+}
 
-  &--bg-blue {
-    padding-top: 28px;
-    padding-bottom: 35px;
-    background-color: $blue;
-  }
+.application__download {
+  padding: 28px 20px 35px;
+  background-color: $blue;
 }
 
 .application__bg {
@@ -30,6 +28,10 @@
   background-position: center top;
   background-size: cover;
   z-index: -1;
+
+  &--tablet {
+    display: none;
+  }
 }
 
 .application__slogan {
@@ -41,8 +43,8 @@
 }
 
 .application__button {
-  display: inline-block;
-  margin: 0 auto 32px;
+  display: block;
+  margin-bottom: 32px;
 }
 
 .application__list {
@@ -57,7 +59,7 @@
 .application__item {
   margin-right: 36px;
 
-  &:last-child {
+  &:last-of-type {
     margin: 0;
   }
 }
@@ -90,4 +92,59 @@
   margin: 0 20px 0;
   line-height: 24px;
   text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .application {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 100px 0 110px;
+    background-image: url("../img/iphone-hand-tablet@1x.png");
+    background-repeat: no-repeat;
+    background-position: 50% bottom;
+    background-size: auto;
+  }
+
+  .application__header {
+    margin-left: 20px;
+    margin-bottom: 40px;
+    padding: 0;
+    width: calc(50vw - 30px);
+    background: none;
+  }
+
+  .application__download {
+    margin-left: 20px;
+    padding: 0;
+    width: calc(50vw - 30px);
+    background: none;
+  }
+
+  .application__slogan {
+    font-size: 40px;
+  }
+
+  .application__note {
+    font-size: 18px;
+  }
+
+  .application__bg {
+    &--mobile {
+      display: none;
+    }
+
+    &--tablet {
+      display: block;
+      top: -110px;
+      width: 100vw;
+      height: calc(100% + 110px);
+      background-color: $blue;
+      background-image: url("../img/bg-back-tablet@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-size: cover;
+      z-index: -1;
+    }
+  }
 }

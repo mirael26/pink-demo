@@ -17,7 +17,7 @@
     height: 32px;
     background-image: url("../img/bg-triangle-white-footer.svg");
     background-repeat: no-repeat;
-    background-size: 100% 32px;
+    background-size: 100vw 100%;
   }
 }
 
@@ -31,6 +31,8 @@
 .contacts__list {
   @include list;
   position: relative;
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
 }
@@ -64,10 +66,70 @@
   z-index: -1;
 }
 
+.contacts__google-map {
+  &--tablet,
+  &--desktop {
+    display: none;
+  }
+}
+
 .contacts__map-image {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   z-index: -2;
+
+  &--tablet {
+    display: none;
+  }
+
+  &--desktop {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .contacts__wrapper {
+    &::after {
+      bottom: -68px;
+      height: 68px;
+    }
+  }
+
+  .contacts__list {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .contacts__item {
+    width: 240px;
+  }
+
+  .contacts__map {
+    height: 374px;
+  }
+
+  .contacts__google-map {
+    &--mobile {
+      display: none;
+    }
+
+    &--tablet {
+      display: block;
+    }
+  }
+
+  .contacts__map-image {
+    bottom: -127px;
+
+    &--mobile {
+      display: none;
+    }
+
+    &--tablet {
+      display: block;
+    }
+  }
 }

@@ -1,15 +1,15 @@
 .advantages {
-  padding-bottom: 282px;
+  position: relative;
+  padding-bottom: 322px;
   background-color: $light-grey;
-  background-image: url("../img/iphone-screen-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: center (bottom -43px);
 }
 
-.advantages__wrapper {
+.advantages__header {
   position: relative;
   margin-bottom: 34px;
-  padding: 46px 58px 32px;
+  padding: 46px 20px 32px;
   background-color: $white;
 
   &::after {
@@ -21,14 +21,13 @@
     height: 34px;
     background-image: url("../img/bg-triangle-white.svg");
     background-repeat: no-repeat;
-    background-size: 100% 34px;
+    background-size: 100vw 100%;
   }
 }
 
 .advantages__lead {
   @include lead-blue;
-  margin: 0;
-  margin-bottom: 38px;
+  margin: 0 38px 38px;
   padding: 0;
   text-align: center;
 
@@ -39,12 +38,16 @@
 
 .advantages__list {
   @include list;
-  padding: 53px 28px 0;
+  padding: 53px 20px 0;
   text-align: center;
 }
 
 .advantages__item {
   margin-bottom: 40px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
 .advantages__title {
@@ -60,4 +63,70 @@
   margin: 0;
   padding: 0;
   line-height: 24px;
+}
+
+.advantages__phones {
+  position: absolute;
+  left: calc(50% - 78px);
+  bottom: -42px;
+  display: flex;
+  justify-content: center;
+}
+
+.advantages__phone {
+  width: 157px;
+  height: 320px;
+  background-repeat: no-repeat;
+
+  &--grey {
+    display: none;
+  }
+
+  &--pink {
+    display: none;
+  }
+
+  &--pink-smile {
+    background-image: url("../img/iphone-screen-mobile@1x.png");
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .advantages {
+    padding-bottom: 45px;
+  }
+
+  .advantages__header {
+    padding: 58px 20px 46px;
+
+    &::after {
+      bottom: -52px;
+      height: 52px;
+    }
+  }
+
+  .advantages__lead {
+    font-size: 40px;
+  }
+
+  .advantages__list {
+    width: calc(50%);
+    padding: 46px 20px 0 0;
+    margin-left: auto;
+    text-align: left;
+  }
+
+  .advantages__phones {
+    left: 20px;
+    bottom: 0;
+  }
+
+  .advantages__phone {
+    width: 268px;
+    height: 483px;
+
+    &--pink-smile {
+      background-image: url("../img/iphone-screen-3-tablet@1x.png");
+    }
+  }
 }

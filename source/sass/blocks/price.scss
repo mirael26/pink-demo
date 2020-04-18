@@ -5,11 +5,19 @@
   background-color: $light-grey;
 }
 
-.price__list {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 40px;
-  transform: translateX(calc(-416px + 50vw));
+.price__table {
+  &--mobile {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 40px;
+    transform: translateX(calc(-416px + 50vw));
+  }
+
+  &--tablet-desktop {
+    display: none;
+    margin: 0 auto;
+    border-collapse: collapse;
+  }
 }
 
 .price__tariff {
@@ -42,4 +50,40 @@
   text-transform: uppercase;
   border-bottom: 2px solid #e5e5e5;
   background-color: $white;
+}
+
+@media (min-width: $tablet-width) {
+  .price {
+    padding: 90px 20px 68px;
+  }
+
+  .price__table {
+    &--mobile {
+      display: none;
+    }
+
+    &--tablet-desktop {
+      display: table;
+    }
+  }
+
+  .price__tariff-name {
+    width: 25%;
+    font-size: 16px;
+    border: 2px solid #e5e5e5;
+  }
+
+  .price__cost {
+    font-size: 18px;
+  }
+
+  .price__tariff-content {
+    padding: 7px 16px;
+    text-transform: none;
+    border: 2px solid #e5e5e5;
+  }
+
+  .price__toggles {
+    display: none;
+  }
 }

@@ -22,4 +22,3 @@ buttonClose.addEventListener("click", function(evt) {
   buttonOpen.classList.remove("hidden");
   buttonClose.classList.add("hidden");
 });
-

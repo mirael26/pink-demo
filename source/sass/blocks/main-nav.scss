@@ -46,3 +46,13 @@
   line-height: 32px;
   text-transform: uppercase;
 }
+
+@media (min-width: $tablet-width) {
+  .main-nav__button-open {
+    top: 31px;
+  }
+
+  .main-nav__button-close {
+    top: 32px;
+  }
+}
