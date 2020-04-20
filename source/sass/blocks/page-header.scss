@@ -22,3 +22,20 @@
     margin-bottom: 42px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .page-header {
+    padding: 0;
+  }
+
+  .page-header__wrapper {
+    @include desktop-wrapper;
+    display: flex;
+    flex-direction: row;
+    padding: 27px 10px 0;
+  }
+
+  .page-header__logo {
+    margin: 0;
+  }
+}

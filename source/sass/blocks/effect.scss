@@ -2,7 +2,6 @@
   display: none;
   flex-direction: row;
   justify-content: space-between;
-  padding: 59px 20px 57px;
 }
 
 .effect__timer {
@@ -33,12 +32,13 @@
 
 .effect__info {
   width: 50%;
+  padding: 43px 0 0 0;
 }
 
 .effect__title {
   @include title-black;
   display: inline-block;
-  margin: 43px 0 14px;
+  margin-bottom: 14px;
   font-size: 30px;
   line-height: 36px;
 }
@@ -58,5 +58,56 @@
 @media (min-width: $tablet-width) {
   .effect {
     display: flex;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .effect {
+    background-color: $light-grey;
+    padding: 0;
+  }
+
+  .effect__wrapper {
+    @include desktop-wrapper;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 68px 10px 67px;
+  }
+
+  .effect__timer {
+    width: 298px;
+    height: 345px;
+  }
+
+  .effect__numeral {
+    top: 69px;
+    left: 22px;
+    width: 253px;
+    height: 253px;
+    font-size: 120px;
+    line-height: 205px;
+    border: 16px solid $pink;
+  }
+
+  .effect__info {
+    padding: 96px 50px 0 0;
+    width: 574px;
+  }
+
+  .effect__title {
+    margin-bottom: 14px;
+    line-height: 30px;
+  }
+
+  .effect__text {
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .effect__link {
+    font-size: 18px;
+    line-height: 30px;
   }
 }

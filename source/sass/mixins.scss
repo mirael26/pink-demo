@@ -4,6 +4,11 @@
   list-style: none;
 }
 
+@mixin desktop-wrapper {
+  margin: 0 auto;
+  width: $desktop-width;
+}
+
 @mixin title-white {
   font-family: "Open Sans Bold", "Helvetica", sans-serif;
   font-size: 18px;

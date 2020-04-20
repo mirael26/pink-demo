@@ -1,9 +1,7 @@
 .advantages {
   position: relative;
-  padding-bottom: 322px;
   background-color: $light-grey;
   background-repeat: no-repeat;
-  background-position: center (bottom -43px);
 }
 
 .advantages__header {
@@ -36,8 +34,15 @@
   }
 }
 
+.advantages__box {
+  position: relative;
+  padding-bottom: 322px;
+}
+
 .advantages__list {
   @include list;
+  display: flex;
+  flex-direction: column;
   padding: 53px 20px 0;
   text-align: center;
 }
@@ -69,8 +74,6 @@
   position: absolute;
   left: calc(50% - 78px);
   bottom: -42px;
-  display: flex;
-  justify-content: center;
 }
 
 .advantages__phone {
@@ -92,10 +95,6 @@
 }
 
 @media (min-width: $tablet-width) {
-  .advantages {
-    padding-bottom: 45px;
-  }
-
   .advantages__header {
     padding: 58px 20px 46px;
 
@@ -107,6 +106,10 @@
 
   .advantages__lead {
     font-size: 40px;
+  }
+
+  .advantages__box {
+    padding-bottom: 45px;
   }
 
   .advantages__list {
@@ -127,6 +130,82 @@
 
     &--pink-smile {
       background-image: url("../img/iphone-screen-3-tablet@1x.png");
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .advantages__header {
+    padding: 0;
+
+    &::after {
+      bottom: -83px;
+      height: 92px;
+    }
+  }
+
+  .advantages__wrapper {
+    @include desktop-wrapper;
+    padding: 46px 20px 80px;
+  }
+
+  .advantages__lead {
+    margin: 0;
+    font-size: 50px;
+  }
+
+  .advantages__box {
+    @include desktop-wrapper;
+    padding: 312px 10px 0;
+  }
+
+  .advantages__list {
+    flex-direction: row;
+    justify-content: space-around;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  .advantages__item {
+    width: 240px;
+    margin-bottom: 0;
+  }
+
+  .advantages__title {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .advantages__text {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .advantages__phones {
+    display: flex;
+    justify-content: space-around;
+    top: -49px;
+    width: 940px;
+  }
+
+  .advantages__phone {
+    width: 292px;
+    height: 302px;
+
+    &--grey {
+      display: block;
+      background-image: url("../img/iphone-screen-1-desktop@1x.png");
+    }
+
+    &--pink {
+      display: block;
+      background-image: url("../img/iphone-screen-2-desktop@1x.png");
+    }
+
+    &--pink-smile {
+      background-image: url("../img/iphone-screen-3-desktop@1x.png");
     }
   }
 }
