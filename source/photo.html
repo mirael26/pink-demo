@@ -43,13 +43,15 @@
       <h1 class="visually-hidden">Фотографии</h1>
       <section class="gallery">
         <div class="gallery__header">
-          <h2 class="gallery__title">Фотографии пользователей</h2>
+          <h2 class="gallery__title">Фотографии<br>пользователей</h2>
           <div class="gallery__bg"></div>
         </div>
-        <p class="gallery__note">
-          Взгляните на фотографии, которые выкладывают пользователи!
-          Видите, как не хватает ваших?
-        </p>
+        <div class="gallery__wrapper">
+          <p class="gallery__note">
+            Взгляните на фотографии, которые выкладывают пользователи!
+            Видите, как не хватает ваших?
+          </p>
+        </div>
 
         <div class="gallery__item gallery__item--panorama">
           <a href="" class="gallery__picture gallery__picture--panorama">
@@ -204,8 +206,10 @@
               </li>
             </ul>
 
-            <input class="editor__button button button--pink" type="submit" name="editor-submit" value="Запостить">
-            <button class="editor__button button button--disabled" type="reset">Отмена</button>
+            <div class="editor__buttons">
+              <input class="editor__button button button--pink" type="submit" name="editor-submit" value="Запостить">
+              <button class="editor__button button button--disabled" type="reset">Отмена</button>
+            </div>
           </form>
         </div>
         </div>

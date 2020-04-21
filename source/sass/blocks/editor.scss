@@ -142,7 +142,7 @@
   .editor__range {
     position: static;
     width: 202px;
-    height: 7px;
+    height: 14px;
     margin-left: auto;
 
     &:not(:first-of-type) {
@@ -153,5 +153,46 @@
   .editor__button {
     width: 260px;
     margin-bottom: 24px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .editor__box {
+    width: 940px;
+    margin: 0 auto;
+  }
+
+  .editor__settings {
+    width: 50%;
+  }
+
+  .editor__item {
+    height: 73px;
+  }
+
+
+  .editor__picture {
+    width: 48px;
+    height: 48px;
+  }
+
+  .editor__range {
+    width: 288px;
+  }
+
+  .editor__list {
+    margin-bottom: 146px;
+  }
+
+  .editor__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 410px;
+  }
+
+  .editor__button {
+    width: 183px;
+    margin-bottom: 0;
   }
 }
