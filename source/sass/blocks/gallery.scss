@@ -1,8 +1,6 @@
-.gallery__wrapper {
-  &--bg-image {
-    position: relative;
-    padding: 36px 0 84px;
-  }
+.gallery__header {
+  position: relative;
+  padding: 36px 0 84px;
 }
 
 .gallery__bg {
@@ -38,7 +36,7 @@
   @include list;
   display: flex;
   flex-direction: column;
-  margin: 0;
+  margin: 0 20px 0;
   padding: 0;
 }
 
@@ -47,7 +45,7 @@
   padding: 0;
   margin-bottom: 20px;
 
-  &:last-of-type {
+  &:last-child {
     margin-bottom: 0;
   }
 }
@@ -55,9 +53,8 @@
 .gallery__picture {
   display: block;
   position: relative;
-  width: calc(100% - 40px);
+  width: 100%;
   height: auto;
-  margin: 0 20px 0;
   text-align: center;
 
   &--panorama {
@@ -84,9 +81,14 @@
 .gallery__description {
   display: flex;
   flex-direction: column;
-  margin: -4px 20px 0;
+  margin: -4px 0 0 0;
   padding: 25px 18px 26px 10px;
   background-color: $light-grey;
+
+  &--panorama {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
 
 .gallery__author-name {
@@ -129,4 +131,70 @@
   color: $pink;
   line-height: 24px;
   text-transform: uppercase;
+}
+
+@media (min-width: $tablet-width) {
+  .gallery__header {
+    padding: 80px 0 140px;
+  }
+
+  .gallery__title {
+    font-size: 50px;
+  }
+
+  .gallery__bg {
+    top: -110px;
+    height: calc(100% + 110px);
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+  }
+
+  .gallery__note {
+    font-size: 18px;
+    margin: 100px 50px 80px;
+  }
+
+  .gallery__list {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .gallery__item {
+    width: calc(50% - 10px);
+    display: flex;
+    flex-direction: column;
+
+    &:last-child {
+      margin-bottom: 20px;
+    }
+
+    &--panorama {
+      width: 100%;
+      margin-bottom: 50px;
+    }
+  }
+
+  .gallery__description {
+    flex-grow: 1;
+
+    &--panorama {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  .gallery__text {
+    &--panorama {
+      order: 3;
+    }
+  }
+
+  .gallery__like {
+    margin-top: auto;
+
+    &--panorama {
+      order: 2;
+      margin-left: auto;
+    }
+  }
 }
