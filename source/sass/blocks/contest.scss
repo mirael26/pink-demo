@@ -5,8 +5,27 @@
 
 .contest__text {
   @include text-blue;
-  margin: 0;
-  padding: 0 20px 0;
+  margin: 0 20px 0;
   line-height: 30px;
   text-align: center;
+
+  &--add {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .contest {
+    padding: 100px 0 20px;
+  }
+
+  .contest__text {
+    font-size: 18px;
+    margin: 0 50px 0;
+
+    &--add {
+      display: inline;
+      margin: 0;
+    }
+  }
 }

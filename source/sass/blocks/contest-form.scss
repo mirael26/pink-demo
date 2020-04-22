@@ -10,12 +10,42 @@
   padding: 40px 20px 23px;
   border: none;
 
-  &--white {
+  &--name,
+  &--contacts,
+  &--emotions {
     background-color: $white;
   }
 
-  &--grey {
+  &--achievement,
+  &--os {
     background-color: $light-grey;
+  }
+}
+
+.contest-form__legend {
+  @include text-pink;
+  position: relative;
+  top: 54px;
+  margin: 0 15px 38px;
+  padding: 0;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+
+  &--contacts {
+    display: none;
+  }
+}
+
+.contest-form__field {
+  &--name {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &--contacts {
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -101,19 +131,6 @@
   border-radius: 3px;
 }
 
-.contest-form__title {
-  @include text-pink;
-  margin: 0 15px 38px;
-  padding: 0;
-  line-height: 18px;
-  text-align: center;
-  text-transform: uppercase;
-
-  &--textarea {
-    margin-bottom: 17px;
-  }
-}
-
 .contest-form__button {
   margin: 0 20px 41px;
 }
@@ -126,5 +143,83 @@
 
   &--pink {
     color: $pink;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .contest-form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 20px 0;
+  }
+
+  .contest-form__fieldset {
+    border: 2px solid #e5e5e5;
+    width: 100%;
+    margin-bottom: 60px;
+    background: $white;
+
+    &--name {
+      order: -2;
+      border: 0;
+      padding-bottom: 0;
+    }
+
+    &--os {
+      order: -2;
+    }
+
+    &--contacts {
+      order: -1;
+    }
+  }
+
+  .contest-form__legend {
+    position: static;
+    margin: 0;
+    padding: 0 10px 0;
+
+    &--contacts {
+      display: inline;
+    }
+  }
+
+  .contest-form__field {
+    &--name {
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 52px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &--contacts {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .contest-form__label {
+    &--name {
+      margin-left: 0;
+    }
+  }
+
+  .contest-form__input {
+    &--name {
+      margin-bottom: 0;
+      margin-left: 20px;
+    }
+  }
+
+  .contest-form__button {
+    width: 300px;
+    margin: 0;
+  }
+
+  .contest-form__small {
+    margin-left: auto;
   }
 }

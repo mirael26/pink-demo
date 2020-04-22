@@ -49,28 +49,39 @@
       <section class="contest">
         <p class="contest__text">
           Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!
+          <span class="contest__text contest__text--add">
+            Пожалуйста, заполните форму ниже:
+          </span>
         </p>
         <form class="contest__form contest-form" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="contest-form__fieldset contest-form__fieldset--white">
-            <label class="contest-form__label" for="surname">
-              Фамилия:
-            </label>
-            <input class="contest-form__input" type="text" name="surname" id="surname" placeholder="Укажите фамилию *" required>
+          <fieldset class="contest-form__fieldset contest-form__fieldset--name">
 
-            <label class="contest-form__label" for="name">
-              Имя:
-            </label>
-            <input class="contest-form__input" type="text" name="name" id="name" placeholder="Введите ваше имя *" required>
+            <div class="contest-form__field contest-form__field--name">
+              <label class="contest-form__label contest-form__label--name" for="surname">
+                Фамилия:
+              </label>
+              <input class="contest-form__input contest-form__input--name" type="text" name="surname" id="surname" placeholder="Укажите фамилию *" required>
+            </div>
 
-            <label class="contest-form__label" for="patronymic">
-              Отчество:
-            </label>
-            <input class="contest-form__input" type="text" name="patronymic" id="patronymic" placeholder="Ну и отчество тоже">
+            <div class="contest-form__field contest-form__field--name">
+              <label class="contest-form__label contest-form__label--name" for="name">
+                Имя:
+              </label>
+              <input class="contest-form__input contest-form__input--name" type="text" name="name" id="name" placeholder="Введите ваше имя *" required>
+            </div>
+
+            <div class="contest-form__field contest-form__field--name">
+              <label class="contest-form__label contest-form__label--name" for="patronymic">
+                Отчество:
+              </label>
+              <input class="contest-form__input contest-form__input--name" type="text" name="patronymic" id="patronymic" placeholder="Ну и отчество тоже">
+            </div>
           </fieldset>
-          <fieldset class="contest-form__fieldset contest-form__fieldset--grey">
-            <h3 class="contest-form__title">
+
+          <fieldset class="contest-form__fieldset contest-form__fieldset--achievements">
+            <legend class="contest-form__legend">
               Ваши безбашенные достижения в путешествии
-            </h3>
+            </legend>
 
             <input class="visually-hidden contest-form__checkbox" type="checkbox" name="achievement-1" id="achievement-1" checked>
             <label class="contest-form__label contest-form__label--checkbox" for="achievement-1">
@@ -103,22 +114,30 @@
             </label>
           </fieldset>
 
-          <fieldset class="contest-form__fieldset contest-form__fieldset--white">
-            <label class="contest-form__label" for="tel">
-              Номер телефона
-            </label>
-            <input class="contest-form__input" type="tel" name="tel" id="tel" pattern="[0-9]{5,15}" placeholder="Номер, пожалуйста">
+          <fieldset class="contest-form__fieldset contest-form__fieldset--contacts">
+            <legend class="contest-form__legend contest-form__legend--contacts">
+              Контактная информация
+            </legend>
 
-            <label class="contest-form__label" for="email">
-              Адрес почты
-            </label>
-            <input class="contest-form__input" type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Введите почту *" required>
+            <div class="contest-form__field contest-form__field--contacts">
+              <label class="contest-form__label" for="tel">
+                Номер телефона
+              </label>
+              <input class="contest-form__input" type="tel" name="tel" id="tel" pattern="[0-9]{5,15}" placeholder="Номер, пожалуйста">
+            </div>
+
+            <div class="contest-form__field contest-form__field--contacts">
+              <label class="contest-form__label" for="email">
+                Адрес почты
+              </label>
+              <input class="contest-form__input" type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Введите почту *" required>
+            </div>
           </fieldset>
 
-          <fieldset class="contest-form__fieldset contest-form__fieldset--grey">
-            <h3 class="contest-form__title">
+          <fieldset class="contest-form__fieldset contest-form__fieldset--os">
+            <legend class="contest-form__legend">
               С каким приложением путешествовали?
-            </h3>
+            </legend>
 
             <input class="visually-hidden contest-form__radio" type="radio" name="travel-app" id="pink-ios" value="pink-ios" checked>
             <label class="contest-form__label contest-form__label--radio" for="pink-ios">
@@ -136,17 +155,17 @@
             </label>
           </fieldset>
 
-          <div class="contest-form__fieldset contest-form__fieldset--white">
-            <h3 class="contest-form__title contest-form__title--textarea">
+          <fieldset class="contest-form__fieldset contest-form__fieldset--emotions">
+            <legend class="contest-form__legend contest-form__legend--textarea">
               Опишите свои эмоции
-            </h3>
+            </legend>
             <textarea class="contest-form__input" rows="6" name="emotions" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
-          </div>
+          </fieldset>
 
           <input class="contest-form__button button button--form" type="submit" name="contest-form-submit" value="Отправить форму">
 
           <small class="contest-form__small">
-            <b class="contest-form__small contest-form__small--pink">*</b>-обязательные поля
+            <b class="contest-form__small contest-form__small--pink">*</b> — обязательные поля
           </small>
 
         </form>
@@ -154,9 +173,11 @@
 
     </main>
 
-    <footer class="page-footer">
+    <footer class="page-footer page-footer">
       <a class="page-footer__logo logo logo--footer">
-        <img class="logo__image" src="img/logo-pink-blue-mobile.svg" width="610" height="168" alt="Логотип Pink">
+        <img class="logo__image logo__image--footer-mobile" src="img/logo-pink-blue-mobile.svg" width="610" height="168" alt="Логотип Pink">
+
+        <img class="logo__image logo__image--footer-desktop" src="img/logo-pink-blue-desktop.svg" width="610" height="168" alt="Логотип Pink">
       </a>
       <div class="page-footer__social social">
         <ul class="social__list">
