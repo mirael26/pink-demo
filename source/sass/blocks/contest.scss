@@ -29,3 +29,17 @@
     }
   }
 }
+
+@media (min-width: $desktop-width) {
+  .contest {
+    @include desktop-wrapper;
+  }
+
+  .contest__text {
+    margin: 0 90px 0;
+
+    &--add {
+      margin: 0;
+    }
+  }
+}

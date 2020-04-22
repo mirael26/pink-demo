@@ -223,3 +223,39 @@
     margin-left: auto;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .contest-form {
+    justify-content: space-between;
+    padding-top: 50px;
+  }
+
+  .contest-form__fieldset {
+    &--name {
+      align-self: flex-end;
+      width: 435px;
+    }
+
+    &--os {
+      align-self: flex-end;
+      width: 435px;
+      padding-left: 74px;
+    }
+
+    &--contacts {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    &--achievements {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  .contest-form__field {
+    &--contacts {
+      width: 374px;
+    }
+  }
+}
