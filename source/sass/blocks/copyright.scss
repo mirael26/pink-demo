@@ -16,3 +16,9 @@
 .copyright__image {
   fill: $pink;
 }
+
+@media (min-width: $desktop-width) {
+  .copyright__text {
+    font-size: 18px;
+  }
+}

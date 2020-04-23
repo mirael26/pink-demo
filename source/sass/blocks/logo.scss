@@ -1,13 +1,66 @@
 .logo {
   display: block;
 
-  &--white-mobile {
+  &--header {
     width: 75px;
     height: 22px;
   }
 
-  &--blue-mobile {
+  &--footer {
     width: 147px;
     height: 40px;
+  }
+}
+
+.logo__image {
+  &--header-tablet {
+    display: none;
+  }
+
+  &--header-desktop {
+    display: none;
+  }
+
+  &--footer-desktop {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .logo {
+    &--header {
+      width: 147px;
+      height: 40px;
+    }
+  }
+
+  .logo__image {
+    &--header-mobile {
+      display: none;
+    }
+
+    &--header-tablet {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .logo__image {
+    &--header-tablet {
+      display: none;
+    }
+
+    &--header-desktop {
+      display: block;
+    }
+
+    &--footer-mobile {
+      display: none;
+    }
+
+    &--footer-desktop {
+      display: block;
+    }
   }
 }

@@ -1,12 +1,27 @@
-.main-nav__toggle {
+.main-nav__button-open {
   position: absolute;
-  top: 21px;
-  right: 19px;
-  width: 24px;
-  height: 23px;
+  top: 8px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  font-size: 0;
+  background-image: url("../img/icon-menu-burger.svg");
+  background-repeat: no-repeat;
+  background-size: 50px 24px;
+  background-position: 50%;
+}
+
+.main-nav__button-close {
+  position: absolute;
+  top: 8px;
+  right: 6px;
+  width: 50px;
+  height: 50px;
   font-size: 0;
   background-image: url("../img/icon-menu-cross.svg");
   background-repeat: no-repeat;
+  background-size: 24px 23px;
+  background-position: 50%;
 }
 
 .main-nav__list {
@@ -30,4 +45,45 @@
   padding: 16px;
   line-height: 32px;
   text-transform: uppercase;
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav__button-open {
+    top: 31px;
+  }
+
+  .main-nav__button-close {
+    top: 32px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav {
+    margin-left: auto;
+  }
+
+  .main-nav__button-open {
+    display: none;
+  }
+
+  .main-nav__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 11px;
+  }
+
+  .main-nav__item {
+    margin-left: 70px;
+    border: none;
+    box-shadow: none;
+  }
+
+  .main-nav__link {
+    padding: 5px;
+    font-family: "Open Sans", "Helvetica", sans-serif;
+    font-weight: 400;
+    line-height: 18px;
+    text-transform: none;
+  }
 }

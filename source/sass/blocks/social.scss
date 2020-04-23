@@ -4,6 +4,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 }
@@ -29,7 +30,6 @@
 
   &--twitter {
     background-image: url("../img/icon-twitter.svg");
-
   }
 
   &--facebook {
@@ -40,4 +40,3 @@
     background-image: url("../img/icon-youtube.svg");
   }
 }
-

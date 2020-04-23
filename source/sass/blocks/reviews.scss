@@ -7,17 +7,19 @@
   &::after {
     content: "";
     position: absolute;
-    top: 100%;
+    bottom: -29px;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 34px;
-    background-image: url("../img/bg-triangle-white-footer.svg");
+    background-image: url("../img/bg-triangle-white.svg");
     background-repeat: no-repeat;
-    background-size: 100% 34px;
+    background-size: 100vw 100%;
   }
 }
 
 .reviews__item {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
 }
@@ -27,6 +29,12 @@
   display: inline-block;
   margin-bottom: 25px;
   font-style: normal;
+  line-height: 30px;
+}
+
+.reviews__author-info {
+  @include text-blue;
+  display: none;
   line-height: 30px;
 }
 
@@ -41,4 +49,97 @@
 .reviews__toggles {
   margin: 0;
   padding: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .reviews {
+    &::after {
+      bottom: -52px;
+      height: 52px;
+    }
+  }
+
+  .reviews__author-name {
+    font-size: 20px;
+    order: 2;
+  }
+
+  .reviews__author-info {
+    display: inline;
+  }
+
+  .reviews__text {
+    order: 1;
+    font-size: 18px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .reviews {
+    padding: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 72px;
+      left: 50%;
+      width: 79px;
+      height: 63px;
+      background-image: url("../img/icon-quotes.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &::after {
+      bottom: -78px;
+      height: 82px;
+    }
+  }
+
+  .reviews__wrapper {
+    @include desktop-wrapper;
+    position: relative;
+    padding: 190px 10px 41px;
+  }
+
+  .reviews__list {
+    width: 700px;
+    margin: 0 auto;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 213px;
+      left: 10px;
+      width: 22px;
+      height: 41px;
+      background-image: url("../img/icon-review-arrow-left.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 213px;
+      right: 10px;
+      width: 22px;
+      height: 41px;
+      background-image: url("../img/icon-review-arrow-right.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  .reviews__author-name {
+    font-size: 24px;
+  }
+
+  .reviews__author-info {
+    font-size: 18px;
+  }
+
+  .reviews__toggles {
+    display: none;
+  }
 }
