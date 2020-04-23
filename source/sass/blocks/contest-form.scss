@@ -22,6 +22,11 @@
   }
 }
 
+.contest-form__fieldset-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .contest-form__legend {
   @include text-pink;
   position: relative;
@@ -241,15 +246,22 @@
       width: 435px;
       padding-left: 74px;
     }
+  }
 
-    &--contacts {
-      flex-direction: row;
-      justify-content: space-around;
-    }
+  .contest-form__fieldset-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
 
-    &--achievements {
-      flex-direction: row;
-      flex-wrap: wrap;
+  .contest-form__label {
+    &--checkbox {
+      width: 200px;
+
+      &:nth-of-type(2n-1) {
+        order: -1;
+      }
     }
   }
 
