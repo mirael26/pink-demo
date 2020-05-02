@@ -1,20 +1,26 @@
 var form = document.querySelector(".contest__form");
+var submit = document.querySelector(".contest-form__button");
 var popupSuccess = document.querySelector(".popup--success");
 var popupFailure = document.querySelector(".popup--failure");
 var popupClose = document.querySelector(".popup__button");
 
-var name = form.querySelector("[name=name]");
+var firstname = form.querySelector("[name=firstname]");
 var surname = form.querySelector("[name=surname]");
 var email = form.querySelector("[name=email]");
 
-form.addEventListener("submit", function(evt) {
-  if (!name.value || !surname.value || !email.value) {
+submit.addEventListener("click", function(evt) {
+  console.log(firstname.value);
+  console.log(surname.value);
+  console.log(email.value);
+  if(!firstname.value || !surname.value || !email.value) {
     evt.preventDefault();
     popupFailure.classList.remove("hidden");
-  } else {
+  }
+})
+
+form.addEventListener("submit", function(evt) {
     evt.preventDefault();
     popupSuccess.classList.remove("hidden");
-  }
 })
 
 popupClose.addEventListener("click", function(evt) {
