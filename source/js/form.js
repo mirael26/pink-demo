@@ -2,7 +2,8 @@ var form = document.querySelector(".contest__form");
 var submit = document.querySelector(".contest-form__button");
 var popupSuccess = document.querySelector(".popup--success");
 var popupFailure = document.querySelector(".popup--failure");
-var popupClose = document.querySelector(".popup__button");
+var buttonErrorOk = document.querySelector("#button-error-ok");
+var buttonSuccessOk = document.querySelector("#button-success-ok");
 
 var firstname = form.querySelector("[name=firstname]");
 var surname = form.querySelector("[name=surname]");
@@ -23,15 +24,30 @@ form.addEventListener("submit", function(evt) {
     popupSuccess.classList.remove("hidden");
 })
 
-popupClose.addEventListener("click", function(evt) {
+buttonErrorOk.addEventListener("click", function(evt) {
   evt.preventDefault();
   if(!popupFailure.classList.contains("hidden")) {
     popupFailure.classList.add("hidden");
   }
-  if(!popupSuccess.classList.contains("hidden")) {
-    popupSuccess.classList.add("hidden");
-  }
 })
+
+buttonSuccessOk.addEventListener("click", function(evt) {
+  evt.preventDefault();
+  if(!popupSuccess.classList.contains("hidden")) {
+      popupSuccess.classList.add("hidden");
+    }
+})
+
+
+// popupClose.addEventListener("click", function(evt) {
+//   evt.preventDefault();
+//   if(!popupFailure.classList.contains("hidden")) {
+//     popupFailure.classList.add("hidden");
+//   }
+//   if(!popupSuccess.classList.contains("hidden")) {
+//     popupSuccess.classList.add("hidden");
+//   }
+// })
 
 window.addEventListener("keydown", function(evt) {
   if(evt.keyCode === 27) {
