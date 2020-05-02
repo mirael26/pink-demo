@@ -232,7 +232,7 @@
 @media (min-width: $desktop-width) {
   .contest-form {
     justify-content: space-between;
-    padding-top: 50px;
+    padding: 50px 10px 0;
   }
 
   .contest-form__fieldset {

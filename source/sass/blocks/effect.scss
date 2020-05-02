@@ -1,7 +1,12 @@
 .effect {
   display: none;
+}
+
+.effect__wrapper {
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 59px 20px 80px;
 }
 
 .effect__timer {
@@ -31,7 +36,7 @@
 }
 
 .effect__info {
-  width: 50%;
+  width: 48%;
   padding: 43px 0 0 0;
 }
 
@@ -57,7 +62,7 @@
 
 @media (min-width: $tablet-width) {
   .effect {
-    display: flex;
+    display: block;
   }
 }
 
@@ -69,9 +74,6 @@
 
   .effect__wrapper {
     @include desktop-wrapper;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     padding: 68px 10px 67px;
   }
 
