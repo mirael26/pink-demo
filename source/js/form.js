@@ -6,14 +6,14 @@ var buttonErrorOk = document.querySelector("#button-error-ok");
 var buttonSuccessOk = document.querySelector("#button-success-ok");
 
 var firstname = form.querySelector("[name=firstname]");
-var surname = form.querySelector("[name=surname]");
+var secondname = form.querySelector("[name=secondname]");
 var email = form.querySelector("[name=email]");
 
 submit.addEventListener("click", function(evt) {
   console.log(firstname.value);
-  console.log(surname.value);
+  console.log(secondname.value);
   console.log(email.value);
-  if(!firstname.value || !surname.value || !email.value) {
+  if(!firstname.value || !secondname.value || !email.value) {
     evt.preventDefault();
     popupFailure.classList.remove("hidden");
   }
@@ -37,17 +37,6 @@ buttonSuccessOk.addEventListener("click", function(evt) {
       popupSuccess.classList.add("hidden");
     }
 })
-
-
-// popupClose.addEventListener("click", function(evt) {
-//   evt.preventDefault();
-//   if(!popupFailure.classList.contains("hidden")) {
-//     popupFailure.classList.add("hidden");
-//   }
-//   if(!popupSuccess.classList.contains("hidden")) {
-//     popupSuccess.classList.add("hidden");
-//   }
-// })
 
 window.addEventListener("keydown", function(evt) {
   if(evt.keyCode === 27) {
