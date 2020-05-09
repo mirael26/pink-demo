@@ -11,12 +11,12 @@
 
     <header class="page-header">
       <div class="page-header__wrapper">
-        <a class="page-header__logo logo logo--header">
-          <img class="logo__image logo__image--header-mobile" src="img/logo-pink-white-mobile.svg" width="75" height="23" alt="Логотип Pink">
-
-          <img class="logo__image logo__image--header-tablet" src="img/logo-pink-white-tablet.svg" width="147" height="41" alt="Логотип Pink">
-
-          <img class="logo__image logo__image--header-desktop" src="img/logo-pink-white-desktop.svg" width="147" height="41" alt="Логотип Pink">
+        <a class="page-header__logo logo">
+          <picture>
+            <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
+            <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+            <img class="logo__image" src="img/logo-pink-white-mobile.svg" width="75" height="23" alt="Логотип Pink">
+          </picture>
         </a>
         <nav class="main-nav">
           <button class="main-nav__button-open hidden" type="button">
@@ -285,10 +285,11 @@
     </main>
 
     <footer class="page-footer page-footer">
-      <a class="page-footer__logo logo logo--footer">
-        <img class="logo__image logo__image--footer-mobile" src="img/logo-pink-blue-mobile.svg" width="610" height="168" alt="Логотип Pink">
-
-        <img class="logo__image logo__image--footer-desktop" src="img/logo-pink-blue-desktop.svg" width="610" height="168" alt="Логотип Pink">
+      <a class="page-footer__logo logo">
+        <picture>
+          <source media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg">
+          <img class="logo__image" src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Логотип Pink">
+        </picture>
       </a>
       <div class="page-footer__social social">
         <ul class="social__list">
