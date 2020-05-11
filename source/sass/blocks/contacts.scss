@@ -66,13 +66,6 @@
   z-index: -1;
 }
 
-.contacts__google-map {
-  &--tablet,
-  &--desktop {
-    display: none;
-  }
-}
-
 .contacts__map-image {
   position: absolute;
   bottom: 0;
@@ -102,16 +95,6 @@
 
   .contacts__map {
     height: 57vw;
-  }
-
-  .contacts__google-map {
-    &--mobile {
-      display: none;
-    }
-
-    &--tablet {
-      display: block;
-    }
   }
 
   .contacts__map-image {
@@ -151,17 +134,7 @@
   }
 
   .contacts__map {
-    height: 52vw;
-  }
-
-  .contacts__google-map {
-    &--tablet {
-      display: none;
-    }
-
-    &--desktop {
-      display: block;
-    }
+    height: 500px;
   }
 
   .contacts__map-image {
