@@ -94,6 +94,15 @@
   }
 }
 
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .advantages__phone {
+    &--pink-smile {
+      background-image: url("../img/iphone-screen-mobile@2x.png");
+      background-size: 157px auto;
+    }
+  }
+}
+
 @media (min-width: $tablet-width) {
   .advantages__header {
     padding: 58px 20px 46px;
@@ -130,6 +139,15 @@
 
     &--pink-smile {
       background-image: url("../img/iphone-screen-3-tablet@1x.png");
+    }
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .advantages__phone {
+      &--pink-smile {
+        background-image: url("../img/iphone-screen-3-tablet@2x.png");
+        background-size: 268px auto;
+      }
     }
   }
 }
@@ -206,6 +224,24 @@
 
     &--pink-smile {
       background-image: url("../img/iphone-screen-3-desktop@1x.png");
+    }
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .advantages__phone {
+      background-size: 292px auto;
+
+      &--grey {
+        background-image: url("../img/iphone-screen-1-desktop@2x.png");
+      }
+
+      &--pink {
+        background-image: url("../img/iphone-screen-2-desktop@2x.png");
+      }
+
+      &--pink-smile {
+        background-image: url("../img/iphone-screen-3-desktop@2x.png");
+      }
     }
   }
 }
