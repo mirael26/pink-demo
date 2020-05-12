@@ -62,15 +62,8 @@
   overflow: hidden;
   position: relative;
   width: 100%;
-  height: 200px;
+  height: 63vw;
   z-index: -1;
-}
-
-.contacts__google-map {
-  &--tablet,
-  &--desktop {
-    display: none;
-  }
 }
 
 .contacts__map-image {
@@ -78,15 +71,8 @@
   bottom: 0;
   left: 0;
   width: 100%;
+  height: auto;
   z-index: -2;
-
-  &--tablet {
-    display: none;
-  }
-
-  &--desktop {
-    display: none;
-  }
 }
 
 @media (min-width: $tablet-width) {
@@ -108,29 +94,11 @@
   }
 
   .contacts__map {
-    height: 374px;
-  }
-
-  .contacts__google-map {
-    &--mobile {
-      display: none;
-    }
-
-    &--tablet {
-      display: block;
-    }
+    height: 57vw;
   }
 
   .contacts__map-image {
     bottom: -127px;
-
-    &--mobile {
-      display: none;
-    }
-
-    &--tablet {
-      display: block;
-    }
   }
 }
 
@@ -169,25 +137,7 @@
     height: 500px;
   }
 
-  .contacts__google-map {
-    &--tablet {
-      display: none;
-    }
-
-    &--desktop {
-      display: block;
-    }
-  }
-
   .contacts__map-image {
     bottom: -197px;
-
-    &--tablet {
-      display: none;
-    }
-
-    &--desktop {
-      display: block;
-    }
   }
 }
