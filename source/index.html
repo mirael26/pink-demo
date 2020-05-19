@@ -12,19 +12,34 @@
 
     <header class="page-header">
       <div class="page-header__wrapper">
-        <a class="page-header__logo logo">
-          <picture>
+        <a class="page-header__logo logo" aria-label="Логотип Pink">
+          <svg class="logo__icon logo__icon--header-mobile" width="75" height="23" aria-hidden="true">
+            <use xlink:href="img/sprite.svg#logo-pink-white-mobile"></use>
+          </svg>
+
+          <svg class="logo__icon logo__icon--header-tablet" width="147" height="40" aria-hidden="true">
+            <use xlink:href="img/sprite.svg#logo-pink-white-tablet"></use>
+          </svg>
+
+          <svg class="logo__icon logo__icon--header-desktop" width="147" height="40" aria-hidden="true">
+            <use xlink:href="img/sprite.svg#logo-pink-white-desktop"></use>
+          </svg>
+        </a>
+        <!-- <picture>
             <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
             <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
             <img class="logo__image" src="img/logo-pink-white-mobile.svg" width="75" height="23" alt="Логотип Pink">
-          </picture>
-        </a>
+          </picture> -->
         <nav class="main-nav">
-          <button class="main-nav__button-open hidden" type="button">
-            <span class="visually-hidden">Открыть меню</span>
+          <button class="main-nav__button-open hidden" type="button" aria-label="Открыть меню">
+            <svg width="50" height="24" aria-hidden="true" focusable="false">
+              <use xlink:href="img/sprite.svg#icon-menu-burger"></use>
+            </svg>
           </button>
-          <button class="main-nav__button-close hidden" type="button">
-            <span class="visually-hidden">Закрыть меню</span>
+          <button class="main-nav__button-close hidden" type="button" aria-label="Закрыть меню">
+            <svg width="24" height="23" aria-hidden="true" focusable="false">
+              <use xlink:href="img/sprite.svg#icon-menu-cross"></use>
+            </svg>
           </button>
           <ul class="main-nav__list">
             <li class="main-nav__item">
@@ -158,11 +173,12 @@
               </p>
             </blockquote>
           </div>
-          <p class="reviews__toggles toggles">
-            <button class="toggles__item" type="button">1</button>
-            <button class="toggles__item" type="button">2</button>
-            <button class="toggles__item" type="button">3</button>
-          </p>
+          <div class="reviews__toggles toggles">
+            <button class="toggles__item toggles__item--active" type="button" aria-label="Первый отзыв">1
+            </button>
+            <button class="toggles__item" type="button" aria-label="Второй отзыв">2</button>
+            <button class="toggles__item" type="button" aria-label="Третий отзыв">3</button>
+          </div>
         </div>
       </section>
 
@@ -229,11 +245,11 @@
           </tr>
         </table>
 
-        <p class="price__toggles toggles">
-          <button class="toggles__item" type="button">1</button>
-          <button class="toggles__item" type="button">2</button>
-          <button class="toggles__item" type="button">3</button>
-        </p>
+        <div class="price__toggles toggles">
+          <button class="toggles__item" type="button" aria-label="Первый тариф">1</button>
+          <button class="toggles__item toggles__item--active" type="button" aria-label="Второй тариф">2</button>
+          <button class="toggles__item" type="button" aria-label="Третий тариф">3</button>
+        </div>
       </section>
 
       <section class="contacts">
@@ -288,11 +304,14 @@
     </main>
 
     <footer class="page-footer page-footer--index">
-      <a class="page-footer__logo logo">
-        <picture>
-          <source media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg">
-          <img class="logo__image" src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Логотип Pink">
-        </picture>
+      <a class="page-header__logo logo" aria-label="Логотип Pink" href="index.html">
+        <svg class="logo__icon logo__icon--footer-mobile" width="147" height="40" aria-hidden="true">
+          <use xlink:href="img/sprite.svg#logo-pink-blue-mobile"></use>
+        </svg>
+
+        <svg class="logo__icon logo__icon--footer-desktop" width="147" height="40" aria-hidden="true">
+          <use xlink:href="img/sprite.svg#logo-pink-blue-desktop"></use>
+        </svg>
       </a>
       <div class="page-footer__social social">
         <ul class="social__list">

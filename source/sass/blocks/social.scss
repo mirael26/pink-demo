@@ -38,4 +38,12 @@
   &--youtube {
     background-image: url("../img/icon-youtube.svg");
   }
+
+  &:hover {
+    border: 3px solid $blue;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 }

@@ -16,6 +16,14 @@
   fill: $pink;
 }
 
+.copyright__link:hover .copyright__image {
+  fill: $blue;
+}
+
+.copyright__link:active .copyright__image {
+  opacity: 0.3;
+}
+
 @media (min-width: $desktop-width) {
   .copyright__text {
     font-size: 18px;

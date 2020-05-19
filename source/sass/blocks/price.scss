@@ -9,7 +9,7 @@
   position: relative;
   left: calc(50vw - 417px);
   width: 834px;
-  margin: 0 auto;
+  margin: 0 auto 40px;
   border-collapse: collapse;
 }
 
@@ -47,6 +47,10 @@
   &:first-child {
     display: none;
   }
+}
+
+.price__toggles {
+  display: flex;
 }
 
 @media (min-width: $tablet-width) {
