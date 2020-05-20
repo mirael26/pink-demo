@@ -56,6 +56,16 @@
   @include contact-pink;
   margin: 0;
   padding: 0;
+
+  &[href]:hover {
+    color: $blue;
+    border-bottom: 1px solid $blue;
+  }
+
+  &[href]:active {
+    color: rgba($blue, 0.3);
+    border-bottom: none;
+  }
 }
 
 .contacts__map {

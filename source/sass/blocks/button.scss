@@ -10,18 +10,48 @@
   &--white {
     @include title-white;
     border-color: $white;
+
+    &:hover {
+      background-color: $white;
+      color: $pink;
+    }
+
+    &:active {
+      color: rgba($pink, 0.3);
+    }
   }
 
   &--pink {
     @include title-pink;
     border-color: $pink;
+
+    &:hover {
+      background-color: $pink;
+      color: $white;
+    }
+
+    &:active {
+      color: rgba($white, 0.3);
+    }
   }
 
-  &--disabled {
+  &--grey {
     font-family: "Open Sans Bold", "Helvetica", sans-serif;
     font-size: 18px;
     font-weight: 700;
     color: rgba($blue, 0.1);
+    border-color: rgba($blue, 0.1);
+
+    &:hover {
+      color: rgba($blue, 0.3);
+      border-color: rgba($blue, 0.3);
+    }
+
+    &:active {
+      color: rgba($white, 0.3);
+      border-color: transparent;
+      background-color: rgba($blue, 0.3);
+    }
   }
 
   &--form {
@@ -31,5 +61,15 @@
     border-radius: 3px;
     border-color: #2aab6d;
     background-color: #2aab6d;
+
+    &:hover {
+      border-color: #1c9b5e;
+      background-color: #1c9b5e;
+    }
+
+    &:active {
+      color: rgba($white, 0.3);
+      border-color: #1c9b5e;
+    }
   }
 }
