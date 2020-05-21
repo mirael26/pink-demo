@@ -88,6 +88,29 @@
   }
 }
 
+.editor__range-line {
+  position: absolute;
+  top: 6px;
+  width: 240px;
+  height: 2px;
+  background-color: $blue;
+}
+
+.editor__range-ball {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  left: 193px;
+  border: 2px solid $pink;
+  border-radius: 50%;
+  background-color: $white;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $pink;
+  }
+}
+
 .editor__button {
   width: 100%;
   margin-bottom: 12px;
@@ -145,7 +168,9 @@
   }
 
   .editor__range {
-    position: static;
+    position: relative;
+    top: 0;
+    left: 0;
     width: 202px;
     height: 14px;
     margin-left: auto;
@@ -153,6 +178,28 @@
     &:not(:first-of-type) {
       display: block;
     }
+  }
+
+  .editor__range-line {
+    width: 202px;
+  }
+
+  .editor__range-ball {
+    &--crop {
+      left: 146px;
+    }
+
+    &--fill {
+      left: 25px;
+    }
+
+    &--contrast {
+      left: 96px;
+    }
+  }
+
+  .editor__buttons {
+    padding-left: 25px;
   }
 
   .editor__button {
@@ -184,8 +231,26 @@
     width: 288px;
   }
 
+  .editor__range-line {
+    width: 288px;
+  }
+
+  .editor__range-ball {
+    &--crop {
+      left: 71px;
+    }
+
+    &--fill {
+      left: 247px;
+    }
+
+    &--contrast {
+      left: 160px;
+    }
+  }
+
   .editor__list {
-    margin-bottom: 146px;
+    margin-bottom: 120px;
   }
 
   .editor__buttons {
@@ -193,6 +258,7 @@
     flex-direction: row;
     justify-content: space-between;
     width: 410px;
+    padding-left: 0;
   }
 
   .editor__button {
