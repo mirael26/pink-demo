@@ -105,6 +105,8 @@
 
     &:first-child {
       display: table-cell;
+      background-color: transparent;
+      border: none;
     }
   }
 
