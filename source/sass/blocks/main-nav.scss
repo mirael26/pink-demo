@@ -84,6 +84,7 @@
   .main-nav__list {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     margin-top: 11px;
   }
