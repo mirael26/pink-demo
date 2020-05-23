@@ -10,12 +10,13 @@
 
 .page-header__logo {
   margin-left: 20px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 @media (min-width: $tablet-width) {
   .page-header {
     min-height: 110px;
+    padding-top: 26px;
   }
 
   .page-header__logo {

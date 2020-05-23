@@ -5,7 +5,7 @@
 
 .application__header {
   position: relative;
-  padding: 29px 0 300px;
+  padding: 20px 0 314px;
   background-image: url("../img/iphone-hand-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: calc(50% - 32px) bottom;
@@ -13,7 +13,7 @@
 }
 
 .application__download {
-  padding: 28px 20px 35px;
+  padding: 28px 20px 29px;
   background-color: $blue;
 }
 
@@ -38,8 +38,8 @@
   @include lead-white;
   margin: 0;
   padding: 0 30px 0;
-  line-height: auto;
   text-align: center;
+  line-height: 31px;
 }
 
 .application__button {
@@ -52,12 +52,12 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
-  margin-bottom: 28px;
+  align-items: flex-end;
+  margin-bottom: 24px;
 }
 
 .application__item {
-  margin-right: 36px;
+  margin-right: 35px;
 
   &:last-of-type {
     margin: 0;
@@ -110,7 +110,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 100px 0 110px;
+    padding: 93px 0 110px;
     background-image: url("../img/iphone-hand-tablet@1x.png");
     background-repeat: no-repeat;
     background-position: 50% bottom;
@@ -119,10 +119,14 @@
 
   .application__header {
     margin-left: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 31px;
     padding: 0;
     width: calc(50vw - 30px);
     background: none;
+  }
+
+  .application__button {
+    margin: 0 auto 46px;
   }
 
   .application__download {
@@ -134,10 +138,16 @@
 
   .application__slogan {
     font-size: 40px;
+    line-height: 48px;
+  }
+
+  .application__list {
+    margin-bottom: 37px;
   }
 
   .application__note {
     font-size: 18px;
+    margin: 0;
   }
 
   .application__bg {
@@ -177,28 +187,37 @@
   .application {
     padding: 0;
     background-image: url("../img/iphone-hand-desktop@1x.png");
-    background-position: calc(50% + 77px) bottom;
+    background-position: calc(50% + 71px) bottom;
   }
 
   .application__wrapper {
     @include desktop-wrapper;
-    padding: 120px 10px 110px;
+    padding: 108px 10px 122px;
   }
 
   .application__header {
     width: 300px;
+    margin-left: 0;
+    margin-bottom: 52px;
   }
 
   .application__slogan {
     font-size: 50px;
+    line-height: 60px;
   }
 
   .application__download {
     width: 300px;
+    margin-left: 0;
   }
 
   .application__button {
     font-size: 21px;
+    margin: 0 auto 66px;
+  }
+
+  .application__list {
+    margin-bottom: 57px;
   }
 
   .application__note {

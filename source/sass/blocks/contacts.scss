@@ -5,7 +5,7 @@
 
 .contacts__wrapper {
   position: relative;
-  padding: 48px 35px 20px;
+  padding: 42px 35px 40px;
   background-color: $white;
 
   &::after {
@@ -24,8 +24,9 @@
 .contacts__lead {
   @include lead-blue;
   margin: 0;
-  margin-bottom: 44px;
+  margin-bottom: 34px;
   padding: 0;
+  line-height: 29px;
 }
 
 .contacts__list {
@@ -38,7 +39,7 @@
 }
 
 .contacts__item {
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 
   &:last-of-type {
     margin-bottom: 0;
@@ -49,13 +50,14 @@
   @include title-blue;
   margin: 0;
   padding: 0;
-  margin-bottom: 5px;
+  margin-bottom: 1px;
 }
 
 .contacts__text {
   @include contact-pink;
   margin: 0;
   padding: 0;
+  line-height: 29px;
 
   &[href]:hover {
     color: $blue;
@@ -99,20 +101,38 @@
 
 @media (min-width: $tablet-width) {
   .contacts__wrapper {
+    padding: 46px 35px 29px;
+
     &::after {
       bottom: -68px;
       height: 68px;
     }
   }
 
+  .contacts__lead {
+    margin-bottom: 43px;
+    font-size: 40px;
+    line-height: 48px;
+  }
+
   .contacts__list {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
+    padding: 0 14px;
   }
 
   .contacts__item {
     width: 240px;
+    margin-bottom: 46px;
+
+    &:last-child {
+      margin: 0 auto;
+    }
+  }
+
+  .contacts__title {
+    margin-bottom: 5px;
   }
 
   .contacts__map {
@@ -120,23 +140,24 @@
   }
 
   .contacts__map-marker {
-    top: calc(50% + 20px);
+    top: calc(50% + 5px);
   }
 
   .contacts__map-image {
-    bottom: -127px;
+    bottom: -110px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .contacts__lead {
     width: 940px;
-    margin: 0 auto 72px;
+    margin: 0 auto 55px;
     font-size: 50px;
+    line-height: 60px;
   }
 
   .contacts__wrapper {
-    padding: 75px 0 26px;
+    padding: 64px 0 6px;
 
     &::after {
       bottom: -100px;
@@ -147,6 +168,7 @@
   .contacts__list {
     width: 940px;
     margin: 0 auto;
+    padding: 0 30px;
   }
 
   .contacts__item {
@@ -159,13 +181,17 @@
     }
   }
 
+  .contacts__title {
+    margin-bottom: 23px;
+  }
+
   .contacts__map {
     height: 500px;
   }
 
   .contacts__map-marker {
-    left: calc(50% - 20px);
-    top: calc(50% + 90px);
+    left: calc(50% - 18px);
+    top: calc(50% + 12px);
   }
 
   .contacts__map-image {

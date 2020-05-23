@@ -1,7 +1,7 @@
 .price {
   overflow-x: hidden;
   // height: 470px;
-  padding: 90px 0 47px;
+  padding: 91px 0 47px;
   background-color: $light-grey;
 }
 
@@ -16,7 +16,7 @@
 .price__tariff-name {
   @include title-white;
   position: relative;
-  padding: 14px 15px;
+  padding: 16px 15px 18px;
   line-height: 30px;
   text-transform: uppercase;
   background-color: $blue;
@@ -31,8 +31,8 @@
 .price__hit {
   @include note-white;
   position: absolute;
-  top: 4px;
-  left: 3px;
+  top: 6px;
+  left: 1px;
   width: 73px;
   height: 73px;
   transform: rotate(-45deg);
@@ -40,8 +40,8 @@
   &::after {
     content: "";
     position: absolute;
-    top: -6px;
-    left: -1px;
+    top: -7px;
+    left: 2px;
     width: 73px;
     height: 73px;
     background-image: url("../img/bg-hit.svg");
@@ -52,14 +52,15 @@
 
 .price__cost {
   @include lead-white;
-  margin-top: 10px;
+  display: inline-block;
+  margin-top: 2px;
   line-height: 30px;
   text-transform: uppercase;
 }
 
 .price__tariff-content {
   @include text-blue;
-  padding: 15px 22px;
+  padding: 15px 22px 14px;
   line-height: 30px;
   text-transform: uppercase;
   border-left: 2px solid #e5e5e5;
@@ -74,13 +75,13 @@
   &--on {
     background-image: url("../img/icon-yes.svg");
     background-repeat: no-repeat;
-    background-position: 93% center;
+    background-position: 94% center;
   }
 
   &--off {
     background-image: url("../img/icon-no.svg");
     background-repeat: no-repeat;
-    background-position: 93% center;
+    background-position: 93% 47%;
   }
 }
 
@@ -90,7 +91,7 @@
 
 @media (min-width: $tablet-width) {
   .price {
-    padding: 90px 0 68px;
+    padding: 87px 0 29px;
   }
 
   .price__table {
@@ -100,7 +101,9 @@
 
   .price__tariff-name {
     width: 25%;
+    padding: 17px 15px 10px;
     font-size: 16px;
+    line-height: 20px;
     border: 2px solid #e5e5e5;
 
     &:first-child {
@@ -115,6 +118,8 @@
     left: 0;
     width: 61px;
     height: 61px;
+    line-height: 27px;
+
 
     &::after {
       top: -1px;
@@ -155,7 +160,7 @@
 
 @media (min-width: $desktop-width) {
   .price {
-    padding: 107px 0 95px;
+    padding: 146px 0 57px;
   }
 
   .price__table {
@@ -163,14 +168,30 @@
   }
 
   .price__tariff-name {
+    padding: 22px 15px 14px;
     font-size: 18px;
+    line-height: 19px;
+  }
+
+  .price__hit {
+    line-height: 43px;
+
+    &::after {
+      top: 2px;
+      left: -6px;
+      width: 73px;
+      height: 73px;
+      background-image: url("../img/bg-hit.svg");
+    }
   }
 
   .price__cost {
     font-size: 24px;
+    line-height: 40px;
   }
 
   .price__tariff-content {
     font-size: 18px;
+    padding: 14px 21px;
   }
 }
