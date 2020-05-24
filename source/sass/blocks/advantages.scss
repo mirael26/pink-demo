@@ -7,16 +7,16 @@
 .advantages__header {
   position: relative;
   margin-bottom: 34px;
-  padding: 46px 20px 32px;
+  padding: 38px 20px 29px;
   background-color: $white;
 
   &::after {
     content: "";
     position: absolute;
-    bottom: -29px;
+    bottom: -32px;
     left: 0;
     width: 100%;
-    height: 34px;
+    height: 32px;
     background-image: url("../img/bg-triangle-white.svg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -25,9 +25,10 @@
 
 .advantages__lead {
   @include lead-blue;
-  margin: 0 38px 38px;
+  margin: 0 0 26px;
   padding: 0;
   text-align: center;
+  line-height: 31px;
 
   &:last-of-type {
     margin-bottom: 0;
@@ -36,19 +37,19 @@
 
 .advantages__box {
   position: relative;
-  padding-bottom: 322px;
+  padding-bottom: 317px;
 }
 
 .advantages__list {
   @include list;
   display: flex;
   flex-direction: column;
-  padding: 53px 20px 0;
+  padding: 47px 20px 0;
   text-align: center;
 }
 
 .advantages__item {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 
   &:last-of-type {
     margin-bottom: 0;
@@ -58,7 +59,7 @@
 .advantages__title {
   @include title-black;
   margin: 0;
-  margin-bottom: 19px;
+  margin-bottom: 13px;
   padding: 0;
   line-height: 24px;
 }
@@ -105,7 +106,7 @@
 
 @media (min-width: $tablet-width) {
   .advantages__header {
-    padding: 58px 20px 46px;
+    padding: 48px 20px 46px;
 
     &::after {
       bottom: -52px;
@@ -115,22 +116,28 @@
 
   .advantages__lead {
     font-size: 40px;
+    line-height: 49px;
+    margin: 0 0 -1px;
   }
 
   .advantages__box {
-    padding-bottom: 45px;
+    padding-bottom: 42px;
   }
 
   .advantages__list {
     width: calc(50%);
-    padding: 46px 20px 0 0;
+    padding: 40px 20px 0 0;
     margin-left: auto;
     text-align: left;
   }
 
+  .advantages__item {
+    margin-bottom: 33px;
+  }
+
   .advantages__phones {
-    left: 20px;
-    bottom: 0;
+    left: 21px;
+    bottom: -2px;
   }
 
   .advantages__phone {
@@ -157,24 +164,25 @@
     padding: 0;
 
     &::after {
-      bottom: -83px;
-      height: 92px;
+      bottom: -90px;
+      height: 90px;
     }
   }
 
   .advantages__wrapper {
     @include desktop-wrapper;
-    padding: 46px 20px 80px;
+    padding: 68px 20px 80px;
   }
 
   .advantages__lead {
     margin: 0;
     font-size: 50px;
+    line-height: 60px;
   }
 
   .advantages__box {
     @include desktop-wrapper;
-    padding: 312px 10px 0;
+    padding: 319px 0 0;
   }
 
   .advantages__list {
@@ -194,6 +202,7 @@
   .advantages__title {
     font-size: 30px;
     line-height: 30px;
+    margin-bottom: 23px;
   }
 
   .advantages__text {
@@ -203,9 +212,10 @@
 
   .advantages__phones {
     display: flex;
-    justify-content: space-around;
-    top: -49px;
-    width: 940px;
+    justify-content: space-between;
+    top: -40px;
+    left: 14px;
+    width: 935px;
   }
 
   .advantages__phone {

@@ -10,7 +10,7 @@
 }
 
 .social__item {
-  margin-right: 15px;
+  margin-right: 12px;
 
   &:last-of-type {
     margin-right: 0;
@@ -21,7 +21,6 @@
   display: block;
   width: 51px;
   height: 51px;
-  padding: 14px;
   border: 3px solid rgba($blue, 0.1);
   border-radius: 50%;
   background-repeat: no-repeat;
@@ -37,5 +36,13 @@
 
   &--youtube {
     background-image: url("../img/icon-youtube.svg");
+  }
+
+  &:hover {
+    border: 3px solid $blue;
+  }
+
+  &:active {
+    opacity: 0.1;
   }
 }

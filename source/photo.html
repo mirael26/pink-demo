@@ -6,32 +6,44 @@
     <title>HTML Academy: Пинк</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
-    <script src="picturefill.js"></script>
+    <script src="js/picturefill.js"></script>
+    <script src="js/svg4everybody.js"></script>
+    <script>svg4everybody();</script>
   </head>
   <body>
 
     <header class="page-header">
       <div class="page-header__wrapper">
-        <a class="page-header__logo logo" href="index.html">
-          <picture>
-            <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
-            <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
-            <img class="logo__image" src="img/logo-pink-white-mobile.svg" width="75" height="23" alt="Логотип Pink">
-          </picture>
+        <a class="page-header__logo logo" aria-label="Логотип Pink" href="index.html">
+          <svg class="logo__icon logo__icon--header-mobile" width="75" height="23" aria-hidden="true">
+            <use xlink:href="img/sprite.svg#logo-pink-white-mobile"></use>
+          </svg>
+
+          <svg class="logo__icon logo__icon--header-tablet" width="147" height="40" aria-hidden="true">
+            <use xlink:href="img/sprite.svg#logo-pink-white-tablet"></use>
+          </svg>
+
+          <svg class="logo__icon logo__icon--header-desktop" width="147" height="40" aria-hidden="true">
+            <use xlink:href="img/sprite.svg#logo-pink-white-desktop"></use>
+          </svg>
         </a>
         <nav class="main-nav">
-          <button class="main-nav__button-open hidden" type="button">
-            <span class="visually-hidden">Открыть меню</span>
+          <button class="main-nav__button-open hidden" type="button" aria-label="Открыть меню">
+            <svg width="50" height="24">
+              <use xlink:href="img/sprite.svg#icon-menu-burger"></use>
+            </svg>
           </button>
-          <button class="main-nav__button-close hidden" type="button">
-            <span class="visually-hidden">Закрыть меню</span>
+          <button class="main-nav__button-close hidden" type="button" aria-label="Закрыть меню">
+            <svg width="24" height="23">
+              <use xlink:href="img/sprite.svg#icon-menu-cross"></use>
+            </svg>
           </button>
           <ul class="main-nav__list">
             <li class="main-nav__item">
               <a class="main-nav__link" href="index.html">Главная</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link">Фотографии</a>
+              <a class="main-nav__link main-nav__link--current">Фотографии</a>
             </li>
             <li class="main-nav__item">
               <a class="main-nav__link" href="form.html">Конкурс</a>
@@ -70,7 +82,7 @@
                 media="(min-width: 660px)"
                 srcset="img/panorama-tablet@1x.jpg 1x,
                 img/panorama-tablet@2x.jpg 2x">
-              <img class="gallery__image" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" width="320" height="137" alt="Фотография пользователя">
+              <img class="gallery__image gallery__image--panorama" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" width="320" height="137" alt="Фотография пользователя">
             </picture>
           </a>
           <blockquote class="gallery__description gallery__description--panorama">
@@ -260,54 +272,61 @@
           <form class="editor__settings" action="https://echo.htmlacademy.ru" method="post">
             <ul class="editor__list">
               <li class="editor__item">
-                <label class="editor__picture" for="crop">
-                  <svg class="editor__icon" alt="Обрезка" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
-                    <path fill="none" d="M0,0h48v48H0V0z"/>
-                    <path d="M34,30h4V14c0-2.21-1.79-4-4-4H18v4h16V30z M14,34V2h-4v8H2v4h8v20c0,2.21,1.79,4,4,4h20v8h4v-8h8v-4H14z"/>
+                <div class="editor__picture">
+                  <svg class="editor__icon"  width="48" height="48">
+                    <use xlink:href="img/sprite.svg#icon-editor-crop"></use>
                   </svg>
-                </label>
-                <input class="editor__range" type="range" name="crop" id="crop" >
+                </div>
+                <div class="editor__range">
+                  <div class="editor__range-line"></div>
+                  <div class="editor__range-ball editor__range-ball--crop"></div>
+                </div>
               </li>
 
               <li class="editor__item">
-                <label class="editor__picture" for="fill">
-                  <svg class="editor__icon"  alt="Заливка" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
-                    <path fill="none" d="M0,0h48v48H0V0z"/>
-                    <path d="M33.12,17.88L15.24,0l-2.83,2.83l4.76,4.76L6.88,17.88c-1.17,1.17-1.17,3.07,0,4.24l11,11C18.46,33.71,19.23,34,20,34 s1.54-0.29,2.12-0.88l11-11C34.29,20.95,34.29,19.05,33.12,17.88z M10.41,20L20,10.42L29.59,20H10.41z M38,23c0,0-4,4.33-4,7 c0,2.21,1.79,4,4,4s4-1.79,4-4C42,27.33,38,23,38,23z"/>
-                    <rect y="40" width="48" height="3"/>
+                <div class="editor__picture">
+                  <svg class="editor__icon"  width="48" height="48">
+                    <use xlink:href="img/sprite.svg#icon-editor-fill"></use>
                   </svg>
-                </label>
-                <input class="editor__range" type="range" name="crop" id="crop" >
+                </div>
+                <div class="editor__range editor__range--fill">
+                  <div class="editor__range-line"></div>
+                  <div class="editor__range-ball editor__range-ball--fill"></div>
+                </div>
               </li>
 
               <li class="editor__item">
-                <label class="editor__picture" for="contrast">
-                  <svg class="editor__icon" alt="Контраст" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="31.92px" height="31.92px" viewBox="-35.422 -7.96 31.92 31.92" enable-background="new -35.422 -7.96 31.92 31.92" xml:space="preserve">
-                    <path d="M-19.462-3.96c6.595,0,11.96,5.365,11.96,11.96s-5.365,11.96-11.96,11.96S-31.422,14.595-31.422,8 S-26.057-3.96-19.462-3.96 M-19.462-7.96c-8.814,0-15.96,7.145-15.96,15.96c0,8.813,7.146,15.96,15.96,15.96S-3.502,16.813-3.502,8 C-3.502-0.815-10.648-7.96-19.462-7.96L-19.462-7.96z"/>
-                    <path d="M-19.462,16.331c4.706,0,8.52-3.813,8.52-8.52c0-4.705-3.813-8.519-8.52-8.519"/>
+                <div class="editor__picture">
+                  <svg class="editor__icon"  width="48" height="48">
+                    <use xlink:href="img/sprite.svg#icon-editor-contrast"></use>
                   </svg>
-                </label>
-                <input class="editor__range" type="range" name="crop" id="crop" >
+                </div>
+                <div class="editor__range">
+                  <div class="editor__range-line"></div>
+                  <div class="editor__range-ball editor__range-ball--contrast"></div>
+                </div>
               </li>
             </ul>
 
             <div class="editor__buttons">
               <input class="editor__button button button--pink" type="submit" name="editor-submit" value="Запостить">
-              <button class="editor__button button button--disabled" type="reset">Отмена</button>
+              <button class="editor__button button button--grey" type="reset">Отмена</button>
             </div>
           </form>
-        </div>
         </div>
       </section>
 
     </main>
 
     <footer class="page-footer">
-      <a class="page-footer__logo logo">
-        <picture>
-          <source media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg">
-          <img class="logo__image" src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Логотип Pink">
-        </picture>
+      <a class="page-footer__logo logo" aria-label="Логотип Pink" href="index.html">
+        <svg class="logo__icon logo__icon--footer-mobile" width="147" height="40" aria-hidden="true">
+          <use xlink:href="img/sprite.svg#logo-pink-blue-mobile"></use>
+        </svg>
+
+        <svg class="logo__icon logo__icon--footer-desktop" width="147" height="40" aria-hidden="true">
+          <use xlink:href="img/sprite.svg#logo-pink-blue-desktop"></use>
+        </svg>
       </a>
       <div class="page-footer__social social">
         <ul class="social__list">
@@ -330,12 +349,10 @@
       </div>
       <div class="page-footer__copyright copyright">
         <b class="copyright__text">Разработано</b>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <span class="visually-hidden">HTML Academy</span>
-          <svg class="copyright__image" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
-            <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.472,8.017l13.43-7.99l0.042-0.026V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 l-0.001-0.104L13.407,5.28l-0.088-0.056v0.109L1.925,12.118V3.147l11.547-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.013,1.415l5.904,3.513l-0.86,0.507l-5.031-2.992l-0.013,1.415l3.827,2.275l-0.782,0.523l-3.032-1.787 l-0.013,1.413l1.852,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.015,1.044l-7.941-4.728L5.395,19.65 l7.979,4.796l0.017,1.076l-7.972-4.741l-0.013,1.415l8.021,4.821l0.045,0.026l8.143-4.872v-1.268l-0.011-0.148v-3.761l3.415-2.036 v10.02L13.472,31.85L1.925,24.979V15.127z"/>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
+          <svg class="copyright__image" width="26.943px" height="34.09px">
+            <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
           </svg>
-
         </a>
       </div>
     </footer>

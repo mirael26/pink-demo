@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   min-height: 284px;
-  padding: 40px 20px;
+  padding: 42px 20px 34px;
   background-color: $white;
 
   &--index {
@@ -16,11 +16,20 @@
   .page-footer {
     flex-direction: row;
     min-height: 127px;
-    padding: 36px 20px 37px;
+    padding: 20px 20px 37px;
 
     &--index {
       display: flex;
     }
+  }
+
+  .page-footer__social {
+    margin-top: 15px;
+  }
+
+  .page-footer__copyright {
+    margin-top: 21px;
+    margin-left: 20px;
   }
 }
 
@@ -29,6 +38,11 @@
     width: 960px;
     margin: 0 auto;
     min-height: 197px;
-    padding: 70px 10px 72px;
+    padding: 56px 10px 72px;
+  }
+
+  .page-footer__copyright {
+    margin-top: 26px;
+    margin-left: -14px;
   }
 }

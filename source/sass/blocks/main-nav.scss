@@ -1,13 +1,9 @@
 .main-nav__button-open {
   position: absolute;
-  top: 8px;
+  top: 10px;
   right: 20px;
   width: 50px;
   height: 50px;
-  background-image: url("../img/icon-menu-burger.svg");
-  background-repeat: no-repeat;
-  background-size: 50px 24px;
-  background-position: 50%;
   cursor: pointer;
 }
 
@@ -17,10 +13,21 @@
   right: 6px;
   width: 50px;
   height: 50px;
-  background-image: url("../img/icon-menu-cross.svg");
-  background-repeat: no-repeat;
-  background-size: 24px 23px;
-  background-position: 50%;
+}
+
+.main-nav__button-open svg,
+.main-nav__button-close svg {
+  fill: $white;
+}
+
+.main-nav__button-open:hover svg,
+.main-nav__button-close:hover svg {
+  fill: $pink;
+}
+
+.main-nav__button-open:active svg,
+.main-nav__button-close:active svg {
+  fill: rgba($pink, 0.3);
 }
 
 .main-nav__list {
@@ -41,14 +48,23 @@
   @include title-white;
   display: block;
   margin: 0 auto;
-  padding: 16px;
+  padding: 16px 16px 15px;
   line-height: 32px;
   text-transform: uppercase;
+
+  &[href]:hover {
+    color: $pink;
+    font-weight: 700;
+  }
+
+  &[href]:active {
+    color: rgba($pink, 0.3);
+  }
 }
 
 @media (min-width: $tablet-width) {
   .main-nav__button-open {
-    top: 31px;
+    top: 33px;
   }
 
   .main-nav__button-close {
@@ -68,21 +84,33 @@
   .main-nav__list {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     margin-top: 11px;
   }
 
   .main-nav__item {
-    margin-left: 70px;
     border: none;
     box-shadow: none;
+
+    &:not(:first-child) {
+      margin-left: 80px;
+    }
   }
 
   .main-nav__link {
-    padding: 5px;
+    padding: 6px 0 12px;
     font-family: "Open Sans", "Helvetica", sans-serif;
     font-weight: 400;
     line-height: 18px;
     text-transform: none;
+
+    &--current {
+      border-bottom: 2px solid $white;
+    }
+
+    &[href]:active {
+      color: rgba($white, 0.3);
+    }
   }
 }

@@ -1,10 +1,11 @@
 .copyright {
+  display: flex;
   text-align: center;
 }
 
 .copyright__text {
   @include text-blue;
-  margin-right: 12px;
+  margin: 6px 16px 0 0;
   line-height: 18px;
 }
 
@@ -16,8 +17,17 @@
   fill: $pink;
 }
 
+.copyright__link:hover .copyright__image {
+  fill: $blue;
+}
+
+.copyright__link:active .copyright__image {
+  opacity: 0.3;
+}
+
 @media (min-width: $desktop-width) {
   .copyright__text {
     font-size: 18px;
+    margin-right: 14px;
   }
 }

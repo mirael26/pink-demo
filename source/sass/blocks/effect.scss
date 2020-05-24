@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 59px 20px 80px;
+  padding: 59px 20px 56px;
 }
 
 .effect__timer {
@@ -22,35 +22,35 @@
 .effect__numeral {
   position: absolute;
   top: 55px;
-  left: 18px;
+  left: 19px;
   display: inline-block;
   width: 202px;
   height: 202px;
   font-family: "Open Sans Bold", "Helvetica", sans-serif;
   font-weight: 700;
   font-size: 96px;
-  line-height: 157px;
+  line-height: 165px;
   color: $pink;
   border: 13px solid $pink;
   border-radius: 50%;
 }
 
 .effect__info {
-  width: 48%;
-  padding: 43px 0 0 0;
+  width: 50%;
+  padding: 38px 0 0 0;
 }
 
 .effect__title {
   @include title-black;
   display: inline-block;
-  margin-bottom: 14px;
+  margin-bottom: 9px;
   font-size: 30px;
   line-height: 36px;
 }
 
 .effect__text {
   @include text-blue;
-  margin: 0 0 14px;
+  margin: 0 2px 11px 0;
   line-height: 24px;
 }
 
@@ -64,6 +64,12 @@
   .effect {
     display: block;
   }
+
+  .effect__br {
+    &--desktop {
+      display: none;
+    }
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -74,7 +80,7 @@
 
   .effect__wrapper {
     @include desktop-wrapper;
-    padding: 68px 10px 67px;
+    padding: 66px 10px 67px;
   }
 
   .effect__timer {
@@ -93,17 +99,31 @@
   }
 
   .effect__info {
-    padding: 96px 50px 0 0;
+    padding: 94px 40px 0 0;
     width: 574px;
   }
 
   .effect__title {
-    margin-bottom: 14px;
+    margin-bottom: 24px;
     line-height: 30px;
   }
 
+  .effect__title br {
+    display: none;
+  }
+
+  .effect__br {
+    &--tablet {
+      display: none;
+    }
+
+    &--desktop {
+      display: inline;
+    }
+  }
+
   .effect__text {
-    margin-bottom: 20px;
+    margin-bottom: 31px;
     font-size: 18px;
     line-height: 30px;
   }

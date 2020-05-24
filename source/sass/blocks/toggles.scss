@@ -1,0 +1,42 @@
+.toggles {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggles__item {
+  width: 6px;
+  height: 6px;
+  font-size: 0;
+  background-color: $blue;
+  border-radius: 50%;
+  opacity: 0.3;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+
+  &--active {
+    width: 12px;
+    height: 12px;
+    background-color: transparent;
+    border: 3px solid $blue;
+    opacity: 1;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 1;
+    }
+  }
+
+  &:not(:last-child) {
+    margin-right: 18px;
+  }
+}

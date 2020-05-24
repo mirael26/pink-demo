@@ -2,16 +2,76 @@
   display: block;
 }
 
-@media (min-width: $tablet-width) {
-  .logo {
-    &--header {
-      width: 147px;
-      height: 40px;
-    }
+.logo__icon {
+  &--header-mobile {
+    fill: $white;
   }
 
-  .logo__image {
-    width: 147px;
-    height: 40px;
+  &--header-tablet {
+    display: none;
+    fill: $white;
+  }
+
+  &--header-desktop {
+    display: none;
+    fill: $white;
+  }
+
+  &--footer-mobile {
+    fill: $blue;
+  }
+
+  &--footer-desktop {
+    display: none;
+    fill: $blue;
+  }
+}
+
+.logo:hover[href] .logo__icon {
+  fill: $pink;
+}
+
+.logo[href]:active .logo__icon--header-mobile,
+.logo[href]:active .logo__icon--header-tablet,
+.logo[href]:active .logo__icon--header-desktop {
+  fill: $white;
+  opacity: 0.3;
+}
+
+.logo:active .logo__icon--footer-mobile,
+.logo:active .logo__icon--footer-desktop {
+  fill: $blue;
+  opacity: 0.3;
+}
+
+@media (min-width: $tablet-width) {
+  .logo__icon {
+    &--header-mobile {
+      display: none;
+    }
+
+    &--header-tablet {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .logo__icon {
+    &--header-tablet {
+      display: none;
+    }
+
+    &--header-desktop {
+      display: block;
+    }
+
+    &--footer-mobile {
+      display: none;
+    }
+
+    &--footer-desktop {
+      display: block;
+    }
   }
 }
