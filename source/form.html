@@ -70,7 +70,7 @@
       <section class="contest">
         <h2 class="visually-hidden">Форма для конкурса</h2>
         <p class="contest__text">
-          Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!
+          Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
           <span class="contest__text contest__text--add">
             Пожалуйста, заполните форму ниже:
           </span>
@@ -145,23 +145,23 @@
 
             <div class="contest-form__fieldset-wrapper">
               <div class="contest-form__field contest-form__field--contacts">
-                <label class="contest-form__label" for="tel">
+                <label class="contest-form__label contest-form__label--contacts  contest-form__label--contacts-phone" for="tel">
                   Номер телефона
                 </label>
-                <input class="contest-form__input" type="tel" name="tel" id="tel" pattern="[0-9]{5,15}" placeholder="Номер, пожалуйста">
+                <input class="contest-form__input contest-form__input--contacts" type="tel" name="tel" id="tel" pattern="[0-9]{5,15}" placeholder="Номер, пожалуйста">
               </div>
 
               <div class="contest-form__field contest-form__field--contacts">
-                <label class="contest-form__label" for="email">
+                <label class="contest-form__label contest-form__label--contacts contest-form__label--contacts-mail" for="email">
                   Адрес почты
                 </label>
-                <input class="contest-form__input" type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Введите почту *" required>
+                <input class="contest-form__input contest-form__input--contacts" type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Введите почту *" required>
               </div>
             </div>
           </fieldset>
 
           <fieldset class="contest-form__fieldset contest-form__fieldset--os">
-            <legend class="contest-form__legend">
+            <legend class="contest-form__legend contest-form__legend--os">
               С каким приложением путешествовали?
             </legend>
 
@@ -182,16 +182,16 @@
           </fieldset>
 
           <fieldset class="contest-form__fieldset contest-form__fieldset--emotions">
-            <legend class="contest-form__legend contest-form__legend--textarea">
+            <legend class="contest-form__legend contest-form__legend--emotions">
               Опишите свои эмоции
             </legend>
-            <textarea class="contest-form__input" rows="6" name="emotions" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            <textarea class="contest-form__input contest-form__input--emotions" rows="6" name="emotions" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </fieldset>
 
           <input class="contest-form__button button button--form" type="submit" name="contest-form-submit" value="Отправить форму">
 
           <small class="contest-form__small">
-            <b class="contest-form__small contest-form__small--pink">*</b> — обязательные поля
+            <b class="contest-form__small contest-form__small--pink">*</b> — обязательные<span class="contest-form__small-hidden">для заполнения</span> поля
           </small>
 
         </form>

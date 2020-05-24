@@ -1,10 +1,11 @@
 .copyright {
+  display: flex;
   text-align: center;
 }
 
 .copyright__text {
   @include text-blue;
-  margin-right: 12px;
+  margin: 6px 16px 0 0;
   line-height: 18px;
 }
 
@@ -27,6 +28,6 @@
 @media (min-width: $desktop-width) {
   .copyright__text {
     font-size: 18px;
-    margin-right: 10px;
+    margin-right: 14px;
   }
 }

@@ -1,5 +1,5 @@
 .contest {
-  padding: 45px 0 20px;
+  padding: 45px 0 13px;
   background-color: $white;
 }
 
@@ -16,7 +16,7 @@
 
 @media (min-width: $tablet-width) {
   .contest {
-    padding: 100px 0 20px;
+    padding: 92px 0 51px;
   }
 
   .contest__text {
@@ -33,6 +33,7 @@
 @media (min-width: $desktop-width) {
   .contest {
     @include desktop-wrapper;
+    padding: 92px 0 0;
   }
 
   .contest__text {
