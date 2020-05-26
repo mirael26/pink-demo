@@ -50,6 +50,10 @@
   line-height: 30px;
 }
 
+.reviews__arrow {
+  display: none;
+}
+
 .reviews__toggles {
   display: flex;
   margin: 0;
@@ -122,8 +126,14 @@
   .reviews__arrow {
     content: "";
     position: absolute;
+    display: block;
     width: 22px;
     height: 41px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    background: none;
     background-repeat: no-repeat;
     background-size: contain;
     cursor: pointer;
