@@ -31,9 +31,14 @@ gulp.task("fonts", function () {
     .pipe(gulp.dest("build/fonts"))
 })
 
+gulp.task("html", function () {
+  return gulp.src("source/*.html")
+    .pipe(gulp.dest("build"))
+})
+
 gulp.task("server", function () {
   server.init({
-    server: "./",
+    server: "build/",
     notify: false,
     open: true,
     cors: true,
@@ -41,7 +46,8 @@ gulp.task("server", function () {
   });
 
   gulp.watch("source/sass/**/*.scss", gulp.series("css"));
-  gulp.watch("source/*.html").on("change", server.reload);
+  gulp.watch("source/*.html", gulp.series("html"));
+  gulp.watch("build/*.html").on("change", server.reload);
 });
 
-gulp.task("start", gulp.series("css", "img", "fonts", "server"));
+gulp.task("start", gulp.series("css", "img", "fonts", "html", "server"));
