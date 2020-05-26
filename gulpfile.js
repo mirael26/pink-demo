@@ -21,6 +21,16 @@ gulp.task("css", function () {
     .pipe(server.stream());
 });
 
+gulp.task("img", function () {
+  return gulp.src("source/img/**/*")
+    .pipe(gulp.dest("build/img"))
+})
+
+gulp.task("fonts", function () {
+  return gulp.src("source/fonts/**/*")
+    .pipe(gulp.dest("build/fonts"))
+})
+
 gulp.task("server", function () {
   server.init({
     server: "./",
@@ -34,4 +44,4 @@ gulp.task("server", function () {
   gulp.watch("source/*.html").on("change", server.reload);
 });
 
-gulp.task("start", gulp.series("css", "server"));
+gulp.task("start", gulp.series("css", "img", "fonts", "server"));
