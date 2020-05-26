@@ -297,8 +297,8 @@
         content: "";
         position: absolute;
         width: 60px;
-        height: 58px;
-        top: -72px;
+        height: 60px;
+        top: -73px;
         right: 2px;
         background-color: #e5e5e5;
         background-image: url("../img/icon-phone.svg");
@@ -312,8 +312,8 @@
         content: "";
         position: absolute;
         width: 60px;
-        height: 58px;
-        top: -72px;
+        height: 60px;
+        top: -73px;
         right: 2px;
         background-color: #e5e5e5;
         background-image: url("../img/icon-mail.svg");
@@ -331,6 +331,7 @@
 
     &--contacts {
       margin-bottom: 12px;
+      height: 62px;
     }
 
     &--emotions {
@@ -391,7 +392,7 @@
 
   .contest-form__label {
     &--checkbox {
-      width: 200px;
+      width: 26%;
 
       &:nth-of-type(2n-1) {
         order: -1;
