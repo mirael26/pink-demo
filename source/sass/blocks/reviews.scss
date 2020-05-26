@@ -32,6 +32,10 @@
   line-height: 30px;
 }
 
+.reviews__author-name span {
+  display: block;
+}
+
 .reviews__author-info {
   @include text-blue;
   display: none;

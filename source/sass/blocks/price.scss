@@ -28,6 +28,10 @@
   }
 }
 
+.price__tariff-name span {
+  display: block;
+}
+
 .price__hit {
   @include note-white;
   position: absolute;
