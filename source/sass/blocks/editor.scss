@@ -51,6 +51,11 @@
 .editor__picture {
   width: 48px;
   height: 48px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  background: none;
 }
 
 .editor__icon {
@@ -93,8 +98,12 @@
   width: 14px;
   height: 14px;
   left: 193px;
+  margin: 0;
+  padding: 0;
   border: 2px solid $pink;
   border-radius: 50%;
+  box-shadow: none;
+  background: none;
   background-color: $white;
   cursor: pointer;
 
@@ -177,7 +186,12 @@
     opacity: 1;
   }
 
+  .editor__item:hover .editor__icon {
+    opacity: 0.5;
+  }
+
   .editor__range {
+    display: block;
     position: relative;
     top: 0;
     left: 0;
@@ -185,10 +199,6 @@
     height: 14px;
     margin-left: auto;
     margin-right: 18px;
-
-    &:not(:first-of-type) {
-      display: block;
-    }
   }
 
   .editor__range-line {

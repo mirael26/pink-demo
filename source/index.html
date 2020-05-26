@@ -4,6 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML Academy: Пинк</title>
+    <link rel="preload" href="fonts/opensans.woff">
+    <link rel="preload" href="fonts/opensans.woff2">
+    <link rel="preload" href="fonts/opensansbold.woff">
+    <link rel="preload" href="fonts/opensansbold.woff2">
+    <link rel="preload" href="fonts/opensanslight.woff">
+    <link rel="preload" href="fonts/opensanslight.woff2">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/picturefill.js"></script>
     <script src="js/svg4everybody.js"></script>
@@ -27,15 +33,15 @@
           </svg>
         </a>
         <nav class="main-nav">
-          <button class="main-nav__button-open hidden" type="button" aria-label="Открыть меню">
-            <svg width="50" height="24" aria-hidden="true" focusable="false">
+          <button class="main-nav__button hidden" type="button" aria-label="Открыть меню">
+            <svg class="main-nav__icon main-nav__icon--open" width="50" height="24" aria-hidden="true" focusable="false">
               <use xlink:href="img/sprite.svg#icon-menu-burger"></use>
             </svg>
-          </button>
-          <button class="main-nav__button-close hidden" type="button" aria-label="Закрыть меню">
-            <svg width="24" height="23" aria-hidden="true" focusable="false">
+            <svg class="main-nav__icon main-nav__icon--close hidden" width="24" height="23" aria-hidden="true" focusable="false">
               <use xlink:href="img/sprite.svg#icon-menu-cross"></use>
             </svg>
+          </button>
+
           </button>
           <ul class="main-nav__list">
             <li class="main-nav__item">
@@ -159,7 +165,7 @@
           <div class="reviews__list">
             <blockquote class="reviews__item">
               <cite class="reviews__author-name">
-                Николай Петров<br>
+                Николай Петров
                 <span class="reviews__author-info">
                   25 лет, водитель трамвая
                 </span>
@@ -168,6 +174,8 @@
                 «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
               </p>
             </blockquote>
+            <button class="reviews__arrow reviews__arrow--left" type="button" aria-label="Предыдущий отзыв"></button>
+            <button class="reviews__arrow reviews__arrow--right" type="button" aria-label="Следующий отзыв"></button>
           </div>
           <div class="reviews__toggles toggles">
             <button class="toggles__item toggles__item--active" type="button" aria-label="Первый отзыв">1
@@ -186,16 +194,16 @@
 
             </th>
             <th class="price__tariff-name">
-              База<br>
+              <span>База</span>
               <b class="price__cost">1,99 USD</b>
             </th>
             <th class="price__tariff-name">
               <div class="price__hit">Хит</div>
-              Стандарт<br>
+              <span>Стандарт</span>
               <b class="price__cost">3,99 USD</b>
             </th>
             <th class="price__tariff-name">
-              Анлим<br>
+              <span>Анлим</span>
               <b class="price__cost">9,99 USD</b>
             </th>
           </tr>

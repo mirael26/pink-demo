@@ -2,7 +2,7 @@
   position: fixed;
   top: calc(50% - 190px);
   width: 100%;
-  padding-bottom: 52px;
+  padding-bottom: 48px;
   box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
 
   &--success {
@@ -15,8 +15,8 @@
 }
 
 .popup__info {
-  padding: 45px 20px 48px;
-  margin-bottom: 48px;
+  padding: 41px 20px 40px;
+  margin-bottom: 37px;
   background-color: $white;
 }
 
@@ -26,9 +26,13 @@
 
 .popup__title {
   @include title-black;
-  margin: 0 0 32px;
+  margin: 0 0 26px;
   line-height: 24px;
   text-align: center;
+}
+
+.popup__title br {
+  display: none;
 }
 
 .popup__text {
@@ -51,16 +55,29 @@
   }
 
   .popup__info {
-    padding: 45px 70px 37px;
+    padding: 48px 70px 40px;
   }
 
   .popup__title {
     font-size: 30px;
     line-height: 40px;
+    margin: 0 0 22px;
+  }
+
+  .popup__title br {
+    display: inline;
   }
 
   .popup__text {
     font-size: 18px;
+  }
+
+  .popup__text br {
+    display: none;
+  }
+
+  .popup__button {
+    min-width: 300px;
   }
 }
 
@@ -73,6 +90,11 @@
   .popup__info {
     min-height: 214px;
     padding: 50px 190px 37px;
+    margin-bottom: 49px;
+  }
+
+  .popup__title br {
+    display: none;
   }
 
   .popup--success .popup__button {

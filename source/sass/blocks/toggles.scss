@@ -7,6 +7,11 @@
 .toggles__item {
   width: 6px;
   height: 6px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  background: none;
   font-size: 0;
   background-color: $blue;
   border-radius: 50%;

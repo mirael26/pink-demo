@@ -4,8 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML Academy: Пинк</title>
+    <link rel="preload" href="fonts/opensans.woff">
+    <link rel="preload" href="fonts/opensans.woff2">
+    <link rel="preload" href="fonts/opensansbold.woff">
+    <link rel="preload" href="fonts/opensansbold.woff2">
+    <link rel="preload" href="fonts/opensanslight.woff">
+    <link rel="preload" href="fonts/opensanslight.woff2">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/normalize.css">
     <script src="js/picturefill.js"></script>
     <script src="js/svg4everybody.js"></script>
     <script>svg4everybody();</script>
@@ -28,13 +33,11 @@
           </svg>
         </a>
         <nav class="main-nav">
-          <button class="main-nav__button-open hidden" type="button" aria-label="Открыть меню">
-            <svg width="50" height="24">
+          <button class="main-nav__button hidden" type="button" aria-label="Открыть меню">
+            <svg class="main-nav__icon main-nav__icon--open" width="50" height="24" aria-hidden="true" focusable="false">
               <use xlink:href="img/sprite.svg#icon-menu-burger"></use>
             </svg>
-          </button>
-          <button class="main-nav__button-close hidden" type="button" aria-label="Закрыть меню">
-            <svg width="24" height="23">
+            <svg class="main-nav__icon main-nav__icon--close hidden" width="24" height="23" aria-hidden="true" focusable="false">
               <use xlink:href="img/sprite.svg#icon-menu-cross"></use>
             </svg>
           </button>
@@ -272,38 +275,38 @@
           <form class="editor__settings" action="https://echo.htmlacademy.ru" method="post">
             <ul class="editor__list">
               <li class="editor__item">
-                <div class="editor__picture">
+                <button class="editor__picture" type="button" aria-label="Обрезка">
                   <svg class="editor__icon"  width="48" height="48">
                     <use xlink:href="img/sprite.svg#icon-editor-crop"></use>
                   </svg>
-                </div>
+                </button>
                 <div class="editor__range">
                   <div class="editor__range-line"></div>
-                  <div class="editor__range-ball editor__range-ball--crop"></div>
+                  <button class="editor__range-ball editor__range-ball--crop" type="button" aria-label="Ползунок обрезки"></button>
                 </div>
               </li>
 
               <li class="editor__item">
-                <div class="editor__picture">
+                <button class="editor__picture" type="button" aria-label="Заливка">
                   <svg class="editor__icon"  width="48" height="48">
                     <use xlink:href="img/sprite.svg#icon-editor-fill"></use>
                   </svg>
-                </div>
+                </button>
                 <div class="editor__range editor__range--fill">
                   <div class="editor__range-line"></div>
-                  <div class="editor__range-ball editor__range-ball--fill"></div>
+                  <button class="editor__range-ball editor__range-ball--fill" type="button" aria-label="Ползунок заливки"></button>
                 </div>
               </li>
 
               <li class="editor__item">
-                <div class="editor__picture">
+                <button class="editor__picture" type="button" aria-label="Контраст">
                   <svg class="editor__icon"  width="48" height="48">
                     <use xlink:href="img/sprite.svg#icon-editor-contrast"></use>
                   </svg>
-                </div>
+                </button>
                 <div class="editor__range">
                   <div class="editor__range-line"></div>
-                  <div class="editor__range-ball editor__range-ball--contrast"></div>
+                  <button class="editor__range-ball editor__range-ball--contrast" type="button" aria-label="Ползунок контраста"></button>
                 </div>
               </li>
             </ul>
@@ -350,7 +353,7 @@
       <div class="page-footer__copyright copyright">
         <b class="copyright__text">Разработано</b>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
-          <svg class="copyright__image" width="26.943px" height="34.09px">
+          <svg class="copyright__image" width="27" height="34">
             <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
           </svg>
         </a>

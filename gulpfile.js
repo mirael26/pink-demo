@@ -17,13 +17,33 @@ gulp.task("css", function () {
       autoprefixer()
     ]))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("source/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
 });
 
+gulp.task("img", function () {
+  return gulp.src("source/img/**/*")
+    .pipe(gulp.dest("build/img"))
+})
+
+gulp.task("fonts", function () {
+  return gulp.src("source/fonts/**/*")
+    .pipe(gulp.dest("build/fonts"))
+})
+
+gulp.task("js", function () {
+  return gulp.src("source/js/**/*")
+    .pipe(gulp.dest("build/js"))
+})
+
+gulp.task("html", function () {
+  return gulp.src("source/*.html")
+    .pipe(gulp.dest("build"))
+})
+
 gulp.task("server", function () {
   server.init({
-    server: "source/",
+    server: "build/",
     notify: false,
     open: true,
     cors: true,
@@ -31,7 +51,8 @@ gulp.task("server", function () {
   });
 
   gulp.watch("source/sass/**/*.scss", gulp.series("css"));
-  gulp.watch("source/*.html").on("change", server.reload);
+  gulp.watch("source/*.html", gulp.series("html"));
+  gulp.watch("build/*.html").on("change", server.reload);
 });
 
-gulp.task("start", gulp.series("css", "server"));
+gulp.task("start", gulp.series("css", "img", "fonts", "js", "html", "server"));

@@ -1,24 +1,17 @@
 var header = document.querySelector(".page-header");
 var menu = document.querySelector(".main-nav__list");
-var buttonOpen = document.querySelector(".main-nav__button-open");
-var buttonClose = document.querySelector(".main-nav__button-close");
+var button = document.querySelector(".main-nav__button");
+var iconOpen = document.querySelector(".main-nav__icon--open");
+var iconClose = document.querySelector(".main-nav__icon--close");
 
 menu.classList.add("hidden");
 header.classList.add("page-header--menu-close");
-buttonOpen.classList.remove("hidden");
+button.classList.remove("hidden");
 
-buttonOpen.addEventListener("click", function(evt) {
+button.addEventListener("click", function(evt) {
   evt.preventDefault();
-  menu.classList.remove("hidden");
-  header.classList.remove("page-header--menu-close");
-  buttonOpen.classList.add("hidden");
-  buttonClose.classList.remove("hidden");
-});
-
-buttonClose.addEventListener("click", function(evt) {
-  evt.preventDefault();
-  menu.classList.add("hidden");
-  header.classList.add("page-header--menu-close");
-  buttonOpen.classList.remove("hidden");
-  buttonClose.classList.add("hidden");
+  menu.classList.toggle("hidden");
+  header.classList.toggle("page-header--menu-close");
+  iconOpen.classList.toggle("hidden");
+  iconClose.classList.toggle("hidden");
 });

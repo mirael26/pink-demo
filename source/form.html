@@ -4,8 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML Academy: Пинк</title>
+    <link rel="preload" href="fonts/opensans.woff">
+    <link rel="preload" href="fonts/opensans.woff2">
+    <link rel="preload" href="fonts/opensansbold.woff">
+    <link rel="preload" href="fonts/opensansbold.woff2">
+    <link rel="preload" href="fonts/opensanslight.woff">
+    <link rel="preload" href="fonts/opensanslight.woff2">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/normalize.css">
     <script src="js/picturefill.js"></script>
     <script src="js/svg4everybody.js"></script>
     <script>svg4everybody();</script>
@@ -28,13 +33,11 @@
           </svg>
         </a>
         <nav class="main-nav">
-          <button class="main-nav__button-open hidden" type="button" aria-label="Открыть меню">
-            <svg width="50" height="24">
+          <button class="main-nav__button hidden" type="button" aria-label="Открыть меню">
+            <svg class="main-nav__icon main-nav__icon--open" width="50" height="24" aria-hidden="true" focusable="false">
               <use xlink:href="img/sprite.svg#icon-menu-burger"></use>
             </svg>
-          </button>
-          <button class="main-nav__button-close hidden" type="button" aria-label="Закрыть меню">
-            <svg width="24" height="23">
+            <svg class="main-nav__icon main-nav__icon--close hidden" width="24" height="23" aria-hidden="true" focusable="false">
               <use xlink:href="img/sprite.svg#icon-menu-cross"></use>
             </svg>
           </button>
@@ -101,9 +104,9 @@
           </fieldset>
 
           <fieldset class="contest-form__fieldset contest-form__fieldset--achievements">
-            <legend class="contest-form__legend">
+            <h3 class="contest-form__legend">
               Ваши безбашенные достижения в путешествии
-            </legend>
+            </h3>
 
             <div class="contest-form__fieldset-wrapper">
               <input class="visually-hidden contest-form__checkbox" type="checkbox" name="achievement-1" id="achievement-1" checked>
@@ -139,9 +142,9 @@
           </fieldset>
 
           <fieldset class="contest-form__fieldset contest-form__fieldset--contacts">
-            <legend class="contest-form__legend contest-form__legend--contacts">
+            <h3 class="contest-form__legend contest-form__legend--contacts">
               Контактная информация
-            </legend>
+            </h3>
 
             <div class="contest-form__fieldset-wrapper">
               <div class="contest-form__field contest-form__field--contacts">
@@ -161,9 +164,9 @@
           </fieldset>
 
           <fieldset class="contest-form__fieldset contest-form__fieldset--os">
-            <legend class="contest-form__legend contest-form__legend--os">
+            <h3 class="contest-form__legend contest-form__legend--os">
               С каким приложением путешествовали?
-            </legend>
+            </h3>
 
             <input class="visually-hidden contest-form__radio" type="radio" name="travel-app" id="pink-ios" value="pink-ios" checked>
             <label class="contest-form__label contest-form__label--radio" for="pink-ios">
@@ -182,9 +185,9 @@
           </fieldset>
 
           <fieldset class="contest-form__fieldset contest-form__fieldset--emotions">
-            <legend class="contest-form__legend contest-form__legend--emotions">
+            <h3 class="contest-form__legend contest-form__legend--emotions">
               Опишите свои эмоции
-            </legend>
+            </h3>
             <textarea class="contest-form__input contest-form__input--emotions" rows="6" name="emotions" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </fieldset>
 
@@ -231,7 +234,7 @@
       <div class="page-footer__copyright copyright">
         <b class="copyright__text">Разработано</b>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
-          <svg class="copyright__image" width="26.943px" height="34.09px">
+          <svg class="copyright__image" width="27" height="34">
             <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
           </svg>
         </a>
@@ -244,7 +247,7 @@
           Ваша заявка отправлена
         </h2>
         <p class="popup__text">
-          Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.
+          Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и <br>оповестим вас.
         </p>
       </div>
       <button class="popup__button button button--form" id="button-success-ok">
@@ -255,7 +258,7 @@
     <div class="popup popup--failure hidden">
       <div class="popup__info">
         <h2 class="popup__title">
-          Что-то пошло не так!
+          Что-то пошло<br> не так!
         </h2>
         <p class="popup__text">
           Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
