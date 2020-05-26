@@ -113,42 +113,35 @@
   .reviews__list {
     width: 700px;
     margin: 0 auto;
+  }
 
-    &::before {
-      content: "";
-      position: absolute;
+  .reviews__arrow {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 41px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    opacity: 0.3;
+
+    &--left {
       top: 213px;
       left: 10px;
-      width: 22px;
-      height: 41px;
       background-image: url("../img/icon-review-arrow-left.svg");
-      background-repeat: no-repeat;
-      background-size: contain;
-      cursor: pointer;
-      opacity: 0.3;
     }
 
-    &::after {
-      content: "";
-      position: absolute;
+    &--right {
       top: 213px;
       right: 10px;
-      width: 22px;
-      height: 41px;
       background-image: url("../img/icon-review-arrow-right.svg");
-      background-repeat: no-repeat;
-      background-size: contain;
-      cursor: pointer;
-      opacity: 0.3;
     }
 
-    &:hover::before,
-    &:hover::after {
+    &:hover {
       opacity: 0.6;
     }
 
-    &:active::before,
-    &:active::after {
+    &:active {
       opacity: 0.1;
     }
   }
