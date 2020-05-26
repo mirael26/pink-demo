@@ -31,6 +31,11 @@ gulp.task("fonts", function () {
     .pipe(gulp.dest("build/fonts"))
 })
 
+gulp.task("js", function () {
+  return gulp.src("source/js/**/*")
+    .pipe(gulp.dest("build/js"))
+})
+
 gulp.task("html", function () {
   return gulp.src("source/*.html")
     .pipe(gulp.dest("build"))
@@ -50,4 +55,4 @@ gulp.task("server", function () {
   gulp.watch("build/*.html").on("change", server.reload);
 });
 
-gulp.task("start", gulp.series("css", "img", "fonts", "html", "server"));
+gulp.task("start", gulp.series("css", "img", "fonts", "js", "html", "server"));
