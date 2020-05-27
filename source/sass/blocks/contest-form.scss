@@ -82,10 +82,6 @@
     margin-left: 70px;
     margin-bottom: 52px;
 
-    &:last-child {
-      margin-bottom: 38px;
-    }
-
     &::before {
       content: "";
       position: absolute;
@@ -147,6 +143,15 @@
   background-size: 35px 35px;
 }
 
+.contest-form__checkbox-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.contest-form__label--checkbox-lastchild {
+  margin-bottom: 38px;
+}
+
 .contest-form__input {
   @include form-text-blue;
   width: 100%;
@@ -202,7 +207,7 @@
   .contest-form__fieldset {
     border: 2px solid #e5e5e5;
     width: 100%;
-    margin-bottom: 68px;
+    margin-bottom: 66px;
     padding: 56px 58px 22px;
     background: $white;
 
@@ -214,7 +219,7 @@
 
     &--os {
       order: -2;
-      margin-bottom: 66px;
+      margin-bottom: 64px;
     }
 
     &--contacts {
@@ -374,7 +379,7 @@
     }
 
     &--achievements {
-      padding: 55px 4px 7px 58px;
+      padding: 56px 59px 7px 58px;
     }
 
     &--emotions {
@@ -392,8 +397,6 @@
 
   .contest-form__label {
     &--checkbox {
-      width: 26%;
-
       &:nth-of-type(2n-1) {
         order: -1;
       }
