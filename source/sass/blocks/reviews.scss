@@ -32,10 +32,6 @@
   line-height: 30px;
 }
 
-.reviews__author-name span {
-  display: block;
-}
-
 .reviews__author-info {
   @include text-blue;
   display: none;
@@ -77,6 +73,10 @@
   .reviews__author-name {
     font-size: 20px;
     order: 2;
+  }
+
+  .reviews__author-name span {
+    display: block;
   }
 
   .reviews__author-info {

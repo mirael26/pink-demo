@@ -56,3 +56,5 @@ gulp.task("server", function () {
 });
 
 gulp.task("start", gulp.series("css", "img", "fonts", "js", "html", "server"));
+
+gulp.task("build", gulp.series("css", "img", "fonts", "js", "html"));
