@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Academy: Пинк</title>
+    <link rel="preload" href="fonts/opensans.woff">
+    <link rel="preload" href="fonts/opensans.woff2">
+    <link rel="preload" href="fonts/opensansbold.woff">
+    <link rel="preload" href="fonts/opensansbold.woff2">
+    <link rel="preload" href="fonts/opensanslight.woff">
+    <link rel="preload" href="fonts/opensanslight.woff2">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/picturefill.js"></script>
+    <script src="js/svg4everybody.js"></script>
+    <script>svg4everybody();</script>
+  </head>
+  <body>
+
+    <header class="page-header">
+      <div class="page-header__wrapper">
+        <a class="page-header__logo logo" aria-label="Логотип Pink" href="index.html">
+          <svg class="logo__icon logo__icon--header-mobile" width="75" height="23" aria-hidden="true">
+            <use xlink:href="img/sprite.svg#logo-pink-white-mobile"></use>
+          </svg>
+
+          <svg class="logo__icon logo__icon--header-tablet" width="147" height="40" aria-hidden="true">
+            <use xlink:href="img/sprite.svg#logo-pink-white-tablet"></use>
+          </svg>
+
+          <svg class="logo__icon logo__icon--header-desktop" width="147" height="40" aria-hidden="true">
+            <use xlink:href="img/sprite.svg#logo-pink-white-desktop"></use>
+          </svg>
+        </a>
+        <nav class="main-nav">
+          <button class="main-nav__button hidden" type="button" aria-label="Открыть меню">
+            <svg class="main-nav__icon main-nav__icon--open" width="50" height="24" aria-hidden="true" focusable="false">
+              <use xlink:href="img/sprite.svg#icon-menu-burger"></use>
+            </svg>
+            <svg class="main-nav__icon main-nav__icon--close hidden" width="24" height="23" aria-hidden="true" focusable="false">
+              <use xlink:href="img/sprite.svg#icon-menu-cross"></use>
+            </svg>
+          </button>
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--current">Фотографии</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="form.html">Конкурс</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <h1 class="visually-hidden">Фотографии</h1>
+      <section class="gallery">
+        <div class="gallery__header">
+          <h2 class="gallery__title">Фотографии<br>пользователей</h2>
+          <div class="gallery__bg"></div>
+        </div>
+        <div class="gallery__wrapper">
+          <p class="gallery__note">
+            Взгляните на фотографии, которые выкладывают пользователи!
+            Видите, как не хватает ваших?
+          </p>
+        </div>
+
+        <div class="gallery__item gallery__item--panorama">
+          <a href="" class="gallery__picture gallery__picture--panorama">
+            <small class="gallery__tag">Панорама дня</small>
+            <picture>
+              <source
+                media="(min-width: 960px)"
+                srcset="img/panorama-desktop@1x.jpg 1x,
+                img/panorama-desktop@2x.jpg 2x">
+              <source
+                media="(min-width: 660px)"
+                srcset="img/panorama-tablet@1x.jpg 1x,
+                img/panorama-tablet@2x.jpg 2x">
+              <img class="gallery__image gallery__image--panorama" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" width="320" height="137" alt="Фотография пользователя">
+            </picture>
+          </a>
+          <blockquote class="gallery__description gallery__description--panorama">
+            <cite class="gallery__author-name ">Анна
+              <span class="gallery__time">(5 минут назад)</span>
+            </cite>
+            <p class="gallery__text gallery__text--panorama">
+              Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!
+            </p>
+            <b class="gallery__like gallery__like--panorama">НРАВИТСЯ: 215</b>
+          </blockquote>
+        </div>
+
+        <ul class="gallery__list">
+          <li class="gallery__item">
+            <a href="" class="gallery__picture">
+              <picture>
+                <source
+                  media="(min-width: 960px)"
+                  srcset="img/photo-car-desktop@1x.jpg 1x,
+                  img/photo-car-desktop@2x.jpg 2x">
+                <source
+                  media="(min-width: 660px)"
+                  srcset="img/photo-car-tablet@1x.jpg 1x,
+                  img/photo-car-tablet@2x.jpg 2x">
+                <img class="gallery__image" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x" width="280" height="180" alt="Фотография пользователя">
+              </picture>
+            </a>
+            <blockquote class="gallery__description">
+              <cite class="gallery__author-name">Левон
+                <span class="gallery__time">(5 часов назад)</span>
+              </cite>
+              <p class="gallery__text">
+                Вчера он на луну летал, сегодня в руки к нам попал.
+              </p>
+              <b class="gallery__like">НРАВИТСЯ: 356</b>
+            </blockquote>
+          </li>
+
+          <li class="gallery__item">
+            <a href="" class="gallery__picture">
+              <picture>
+                <source
+                  media="(min-width: 960px)"
+                  srcset="img/photo-drumset-desktop@1x.jpg 1x,
+                  img/photo-drumset-desktop@2x.jpg 2x">
+                <source
+                  media="(min-width: 660px)"
+                  srcset="img/photo-drumset-tablet@1x.jpg 1x,
+                  img/photo-drumset-tablet@2x.jpg 2x">
+                <img class="gallery__image" src="img/photo-drumset-mobile@1x.jpg" srcset="img/photo-drumset-mobile@2x.jpg 2x" width="280" height="180" alt="Фотография пользователя">
+              </picture>
+            </a>
+            <blockquote class="gallery__description">
+              <cite class="gallery__author-name">Антон
+                <span class="gallery__time">(12 часов назад)</span>
+              </cite>
+              <p class="gallery__text">
+                Соседи будут рады!
+              </p>
+              <b class="gallery__like">НРАВИТСЯ: 666</b>
+            </blockquote>
+          </li>
+
+          <li class="gallery__item">
+            <a href="" class="gallery__picture">
+              <picture>
+                <source
+                  media="(min-width: 960px)"
+                  srcset="img/photo-window-desktop@1x.jpg 1x,
+                  img/photo-window-desktop@2x.jpg 2x">
+                <source
+                  media="(min-width: 660px)"
+                  srcset="img/photo-window-tablet@1x.jpg 1x,
+                  img/photo-window-tablet@2x.jpg 2x">
+                <img class="gallery__image" src="img/photo-window-mobile@1x.jpg" srcset="img/photo-window-mobile@2x.jpg 2x" width="280" height="180" alt="Фотография пользователя">
+              </picture>
+            </a>
+            <blockquote class="gallery__description">
+              <cite class="gallery__author-name">Борис
+                <span class="gallery__time">(20 часов назад)</span>
+              </cite>
+              <p class="gallery__text">
+                Здесь могла быть ваша цитата о высоком и вечном.
+              </p>
+              <b class="gallery__like">НРАВИТСЯ: 215</b>
+            </blockquote>
+          </li>
+
+          <li class="gallery__item">
+            <a href="" class="gallery__picture">
+              <picture>
+                <source
+                  media="(min-width: 960px)"
+                  srcset="img/photo-fair-desktop@1x.jpg 1x,
+                  img/photo-fair-desktop@2x.jpg 2x">
+                <source
+                  media="(min-width: 660px)"
+                  srcset="img/photo-fair-tablet@1x.jpg 1x,
+                  img/photo-fair-tablet@2x.jpg 2x">
+                <img class="gallery__image" src="img/photo-fair-mobile@1x.jpg" srcset="img/photo-fair-mobile@2x.jpg 2x" width="280" height="180" alt="Фотография пользователя">
+              </picture>
+            </a>
+            <blockquote class="gallery__description">
+              <cite class="gallery__author-name">Сергей
+                <span class="gallery__time">(25 часов назад)</span>
+              </cite>
+              <p class="gallery__text">
+                Самая кубанская в мире!
+              </p>
+              <b class="gallery__like">НРАВИТСЯ: 4</b>
+            </blockquote>
+          </li>
+
+          <li class="gallery__item">
+            <a href="" class="gallery__picture">
+              <picture>
+                <source
+                  media="(min-width: 960px)"
+                  srcset="img/photo-pov-desktop@1x.jpg 1x,
+                    img/photo-pov-desktop@2x.jpg 2x">
+                <source
+                  media="(min-width: 660px)"
+                  srcset="img/photo-pov-tablet@1x.jpg 1x,
+                  img/photo-pov-tablet@2x.jpg 2x">
+                <img class="gallery__image" src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@2x.jpg 2x" width="280" height="180" alt="Фотография пользователя">
+              </picture>
+            </a>
+            <blockquote class="gallery__description">
+              <cite class="gallery__author-name">Максим
+                <span class="gallery__time">(40 часов назад)</span>
+              </cite>
+              <p class="gallery__text">
+                Где снег-то?
+              </p>
+              <b class="gallery__like">НРАВИТСЯ: 150</b>
+            </blockquote>
+          </li>
+
+          <li class="gallery__item">
+            <a href="" class="gallery__picture">
+              <picture>
+                <source
+                  media="(min-width: 960px)"
+                  srcset="img/photo-wing-desktop@1x.jpg 1x,
+                    img/photo-wing-desktop@2x.jpg 2x">
+                <source
+                  media="(min-width: 660px)"
+                  srcset="img/photo-wing-tablet@1x.jpg 1x,
+                    img/photo-wing-tablet@2x.jpg 2x">
+                <img class="gallery__image" src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-wing-mobile@2x.jpg 2x" width="280" height="180" alt="Фотография пользователя">
+              </picture>
+            </a>
+            <blockquote class="gallery__description">
+              <cite class="gallery__author-name">Надежда
+                <span class="gallery__time">(45 часов назад)</span>
+              </cite>
+              <p class="gallery__text">
+                Всем GM и взаимные лайки!
+              </p>
+              <b class="gallery__like">НРАВИТСЯ: 2560</b>
+            </blockquote>
+          </li>
+        </ul>
+      </section>
+
+      <section class="editor">
+        <h2 class="visually-hidden">Инструмент обработки изображений</h2>
+        <p class="editor__note">
+          Затмите их всех!<br>
+          Выкладывайте все, что накопилось в телефоне!
+        </p>
+        <div class="editor__box">
+          <p class="editor__photo">
+            <picture>
+              <source
+                media="(min-width: 960px)"
+                srcset="img/photo-road-desktop@1x.jpg 1x,
+                img/photo-road-desktop@2x.jpg 2x">
+              <source
+                media="(min-width: 660px)"
+                srcset="img/photo-road-tablet@1x.jpg 1x,
+                img/photo-road-tablet@2x.jpg 2x">
+              <img class="editor__image" src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x" width="280" height="374" alt="Изображение для редактирования">
+            </picture>
+          </p>
+          <form class="editor__settings" action="https://echo.htmlacademy.ru" method="post">
+            <ul class="editor__list">
+              <li class="editor__item">
+                <button class="editor__picture" type="button" aria-label="Обрезка">
+                  <svg class="editor__icon"  width="48" height="48">
+                    <use xlink:href="img/sprite.svg#icon-editor-crop"></use>
+                  </svg>
+                </button>
+                <div class="editor__range">
+                  <div class="editor__range-line"></div>
+                  <button class="editor__range-ball editor__range-ball--crop" type="button" aria-label="Ползунок обрезки"></button>
+                </div>
+              </li>
+
+              <li class="editor__item">
+                <button class="editor__picture" type="button" aria-label="Заливка">
+                  <svg class="editor__icon"  width="48" height="48">
+                    <use xlink:href="img/sprite.svg#icon-editor-fill"></use>
+                  </svg>
+                </button>
+                <div class="editor__range editor__range--fill">
+                  <div class="editor__range-line"></div>
+                  <button class="editor__range-ball editor__range-ball--fill" type="button" aria-label="Ползунок заливки"></button>
+                </div>
+              </li>
+
+              <li class="editor__item">
+                <button class="editor__picture" type="button" aria-label="Контраст">
+                  <svg class="editor__icon"  width="48" height="48">
+                    <use xlink:href="img/sprite.svg#icon-editor-contrast"></use>
+                  </svg>
+                </button>
+                <div class="editor__range">
+                  <div class="editor__range-line"></div>
+                  <button class="editor__range-ball editor__range-ball--contrast" type="button" aria-label="Ползунок контраста"></button>
+                </div>
+              </li>
+            </ul>
+
+            <div class="editor__buttons">
+              <input class="editor__button button button--pink" type="submit" name="editor-submit" value="Запостить">
+              <button class="editor__button button button--grey" type="reset">Отмена</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="page-footer">
+      <a class="page-footer__logo logo" aria-label="Логотип Pink" href="index.html">
+        <svg class="logo__icon logo__icon--footer-mobile" width="147" height="40" aria-hidden="true">
+          <use xlink:href="img/sprite.svg#logo-pink-blue-mobile"></use>
+        </svg>
+
+        <svg class="logo__icon logo__icon--footer-desktop" width="147" height="40" aria-hidden="true">
+          <use xlink:href="img/sprite.svg#logo-pink-blue-desktop"></use>
+        </svg>
+      </a>
+      <div class="page-footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--twitter" href="">
+              <span class="visually-hidden">Pink в Твиттере</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="">
+              <span class="visually-hidden">Pink в Фейсбуке</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--youtube" href="">
+              <span class="visually-hidden">Pink на Ютуб</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__copyright copyright">
+        <b class="copyright__text">Разработано</b>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
+          <svg class="copyright__image" width="27" height="34">
+            <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
+          </svg>
+        </a>
+      </div>
+    </footer>
+
+    <script src="js/main-nav.js"></script>
+  </body>
+</html>
